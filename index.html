@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Розвиток — медичний центр для дітей із затримкою нейророзвитку, аутизмом та РДУГ."
+    />
+    <title>Розвиток — медичний центр</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=League+Spartan:wght@500;600;700&family=Manrope:wght@400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a
+          class="brand brand--signature"
+          href="#top"
+          aria-label="Розвиток — медичний центр"
+        >
+          <span class="brand__word"
+            ><span class="brand__accent">Розвиток</span></span
+          >
+          <small>медичний центр</small>
+        </a>
+        <nav class="nav" aria-label="Головна навігація">
+          <a href="#about">Про нас</a><a href="#team">Команда</a
+          ><a href="#services">Послуги</a><a href="#process">Як ми працюємо</a
+          ><a href="#contacts">Контакти</a>
+        </nav>
+
+        <a
+          class="consult"
+          href="#consultation"
+          aria-label="Записатись на консультацію"
+          ><i class="bi bi-telephone-fill" aria-hidden="true"></i
+          ><span>Записатись</span></a
+        >
+        <button
+          class="burger"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+        >
+          <i></i><i></i><i></i>
+        </button>
+      </div>
+      <div class="mobile-menu" aria-hidden="true">
+        <nav>
+          <a href="#about">Про нас</a><a href="#team">Команда</a
+          ><a href="#services">Послуги</a><a href="#process">Як ми працюємо</a
+          ><a href="#contacts">Контакти</a>
+        </nav>
+        <div class="mobile-menu__bottom">
+          <p>Медичний центр для дітей та їхніх родин</p>
+          <a class="mobile-menu__cta" href="#consultation"
+            ><i class="bi bi-telephone-fill" aria-hidden="true"></i
+            ><span>Записатись на консультацію</span
+            ><i class="bi bi-arrow-right" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero__layout">
+          <div class="hero__copy">
+            <p class="eyebrow reveal">Глибина. Виваженість. Дія.</p>
+            <h1 class="hero__title reveal">
+              Бачимо кожну дитину. <br />І будуємо для неї
+            </h1>
+            <div class="hero__route reveal"><em>маршрут</em></div>
+            <p class="hero__lead reveal">
+              Для дітей із затримкою нейророзвитку, аутизмом, РДУГ — від першої
+              тривоги до чіткого плану. Команда лікарів під одним дахом:
+              неврологи, психіатри, гастроентерологи, метаболіст, дитячі
+              дієтологи, генетики.
+            </p>
+
+            <div class="hero__actions reveal">
+              <a
+                class="action action--light"
+                href="https://t.me/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="bi bi-send-fill action__icon"></i>
+                <span>Отримати підтримку в Telegram-боті</span>
+              </a>
+              <a class="action action--dark" href="#consultation">
+                <i
+                  class="bi bi-telephone-fill action__icon"
+                  aria-hidden="true"
+                ></i>
+                <span>Записатись на консультацію</span>
+              </a>
+            </div>
+            <p class="hero__note reveal is-visible">
+              <i class="bi bi-info-circle-fill" aria-hidden="true"></i>
+              <span>
+                З урахуванням безпекової ситуації всі консультації наразі
+                проводяться виключно засобами зв'язку.
+              </span>
+            </p>
+          </div>
+
+          <div class="hero__visual reveal">
+            <div class="portrait">
+              <img
+                src="img/doctor.png"
+                alt="Фахівчиня медичного центру Розвиток"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recognize" id="about">
+        <div class="container">
+          <header class="recognize__head route-reveal">
+            <p class="recognize__eyebrow">Впізнаєте себе?</p>
+            <h2 class="recognize__title">
+              Якщо хоча б одне — про вас,
+              <em>ви за адресою</em>
+            </h2>
+          </header>
+
+          <div class="route" aria-label="Ситуації, у яких ми можемо допомогти">
+            <div class="route__line" aria-hidden="true">
+              <svg viewBox="0 0 1000 1160" preserveAspectRatio="none">
+                <path
+                  class="route__path route__path--base"
+                  d="M130 70 C450 70 790 80 830 225 C865 350 690 390 500 390 C280 390 130 440 155 575 C180 715 410 720 650 720 C835 720 895 790 840 900 C775 1035 430 1040 175 1090"
+                />
+                <path
+                  class="route__path route__path--progress"
+                  d="M130 70 C450 70 790 80 830 225 C865 350 690 390 500 390 C280 390 130 440 155 575 C180 715 410 720 650 720 C835 720 895 790 840 900 C775 1035 430 1040 175 1090"
+                />
+              </svg>
+            </div>
+
+            <article class="route__item route__item--1 route-reveal">
+              <span class="route__number">01</span>
+              <p>
+                Ви сидите з пачкою аналізів і не знаєте, що з ними робити далі.
+              </p>
+            </article>
+
+            <article class="route__item route__item--2 route-reveal">
+              <span class="route__number">02</span>
+              <p>Кожен спеціаліст бачить свій шматок, а цілої картини немає.</p>
+            </article>
+
+            <article class="route__item route__item--3 route-reveal">
+              <span class="route__number">03</span>
+              <p>
+                Дитина приймає купу всього, і ви вже не впевнені, що це справді
+                потрібне саме зараз.
+              </p>
+            </article>
+
+            <article class="route__item route__item--4 route-reveal">
+              <span class="route__number">04</span>
+              <p>
+                Дитина не говорить, не дивиться в очі, не хоче займатися попри
+                зусилля — а єдина відповідь на це: «займайтеся більше».
+              </p>
+            </article>
+
+            <article class="route__item route__item--5 route-reveal">
+              <span class="route__number">05</span>
+              <p>
+                Істерики, агресія, поганий сон — і ніхто не аналізував, що при
+                цьому відбувається в організмі.
+              </p>
+            </article>
+
+            <article class="route__item route__item--6 route-reveal">
+              <span class="route__number">06</span>
+              <p>Були покращення — і знову відкат, і ви не розумієте чому.</p>
+            </article>
+
+            <article class="route__item route__item--7 route-reveal">
+              <span class="route__number">07</span>
+              <p>
+                Вам кажуть «почекаємо», «переросте», «хлопчики вони повільніші».
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="medical-reason" id="medical-reason">
+        <div class="medical-reason__word" aria-hidden="true">
+          МЕДИЧНА ПРИЧИНА
+        </div>
+
+        <div class="container medical-reason__inner">
+          <p class="medical-reason__eyebrow section-reveal">Медична причина</p>
+
+          <div class="medical-reason__top">
+            <h2 class="medical-reason__title section-reveal">
+              За поведінкою може стояти<br />
+              <span>медична причина.</span>
+            </h2>
+          </div>
+
+          <div class="medical-reason__content">
+            <aside class="medical-reason__aside section-reveal">
+              <p>
+                Дивимося ширше,<br />
+                ніж лише на поведінку
+              </p>
+            </aside>
+
+            <div class="medical-reason__copy">
+              <p class="section-reveal">
+                Не говорить, не дивиться в очі, не хоче займатися, істерики,
+                агресія — усе це часто розглядають лише як поведінку або
+                «особливості розвитку». Дитині призначають заняття і кажуть
+                займатися.
+              </p>
+
+              <p class="section-reveal">
+                Але за цими проявами можуть стояти медичні стани:
+                <strong>
+                  порушення обміну речовин, генетичні причини, проблеми з
+                  кишківником, неврологічні порушення.
+                </strong>
+                На звичайному прийомі їх не видно, і стандартно на них не
+                обстежують. Такі стани трапляються не так часто, але пропускати
+                їх не можна: для частини з них є окремі підходи до лікування.
+              </p>
+
+              <p class="medical-reason__conclusion section-reveal">
+                Тому ми дивимося на дитину як лікарі: виключаємо те, що треба
+                виключити, і шукаємо те, що можна скоригувати.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="marquee" aria-label="Напрями роботи медичного центру">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>Бачимо дитину цілісно</span>
+            <i></i>
+            <span>Шукаємо причину</span>
+            <i></i>
+            <span>Будуємо маршрут</span>
+            <i></i>
+            <span>Працюємо командою</span>
+            <i></i>
+          </div>
+
+          <div class="marquee__group" aria-hidden="true">
+            <span>Бачимо дитину цілісно</span>
+            <i></i>
+            <span>Шукаємо причину</span>
+            <i></i>
+            <span>Будуємо маршрут</span>
+            <i></i>
+            <span>Працюємо командою</span>
+            <i></i>
+          </div>
+        </div>
+      </section>
+      <section class="work-process" id="process">
+        <div class="container">
+          <header class="section-head work-process__head">
+            <p class="section-label section-reveal">Як ми працюємо</p>
+
+            <h2 class="section-heading section-reveal">
+              Чотири кроки<br />
+              від хаосу до плану
+            </h2>
+          </header>
+
+          <div class="work-process__grid">
+            <article class="glass-card process-card section-reveal">
+              <span class="process-card__number">01</span>
+
+              <div class="process-card__icon">
+                <i class="bi bi-file-earmark-text"></i>
+              </div>
+
+              <div class="process-card__content">
+                <h3>Анкета</h3>
+
+                <p>
+                  Ви заповнюєте анкету і надсилаєте все, що вже є: аналізи,
+                  висновки, МРТ, ЕЕГ. Лікар вивчає це до зустрічі.
+                </p>
+              </div>
+            </article>
+
+            <article class="glass-card process-card section-reveal">
+              <span class="process-card__number">02</span>
+
+              <div class="process-card__icon">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+
+              <div class="process-card__content">
+                <h3>Консультація</h3>
+
+                <p>
+                  Розбираємо історію дитини, наявні обстеження і те, що вас
+                  турбує найбільше.
+                </p>
+              </div>
+            </article>
+
+            <article class="glass-card process-card section-reveal">
+              <span class="process-card__number">03</span>
+
+              <div class="process-card__icon">
+                <i class="bi bi-signpost-split"></i>
+              </div>
+
+              <div class="process-card__content">
+                <h3>Маршрут</h3>
+
+                <p>
+                  Ви отримуєте письмовий план: які обстеження потрібні і в якій
+                  послідовності, що зробити зараз, а що можна відкласти, до кого
+                  з команди і навіщо.
+                </p>
+              </div>
+            </article>
+
+            <article class="glass-card process-card section-reveal">
+              <span class="process-card__number">04</span>
+
+              <div class="process-card__icon">
+                <i class="bi bi-arrow-repeat"></i>
+              </div>
+
+              <div class="process-card__content">
+                <h3>Повторні консультації</h3>
+
+                <p>
+                  Оцінюємо результати обстежень і коригуємо план. За потреби
+                  лікарі команди спілкуються між собою, тому завжди працюють в
+                  одному інформаційному полі.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="work-process__result section-reveal">
+            <div class="work-process__result-title">
+              <span>Після першої консультації</span>
+
+              <h3>
+                Що ви отримуєте<br />
+                на руки
+              </h3>
+            </div>
+
+            <ul class="result-list">
+              <li>
+                <i class="bi bi-check2"></i>
+                <span>
+                  Письмовий маршрутний лист
+                  <strong>на 3–4 місяці</strong>
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check2"></i>
+                <span>
+                  Список обстежень з поясненням,
+                  <strong>навіщо кожне</strong>
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check2"></i>
+                <span>
+                  Що <strong>НЕ робити</strong> і від чого можна відмовитися
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check2"></i>
+                <span>
+                  До кого з команди звернутися далі, якщо це потрібно
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="doctor-guide" id="services">
+        <div class="container">
+          <!-- Section head -->
+          <header class="section-head doctor-guide__head">
+            <p class="section-label section-reveal">Коли до кого</p>
+
+            <h2 class="section-heading section-reveal">
+              Не знаєте, <em>з якого лікаря</em> почати? Подивіться, що
+              <em>турбує найбільше.</em>
+            </h2>
+
+            <div class="carousel-nav section-reveal">
+              <button
+                class="carousel-nav__btn doctor-guide__prev"
+                type="button"
+                aria-label="Попередня картка"
+              >
+                <i class="bi bi-arrow-left"></i>
+              </button>
+
+              <span class="carousel-nav__count">
+                <strong>01</strong> / 05
+              </span>
+
+              <button
+                class="carousel-nav__btn doctor-guide__next"
+                type="button"
+                aria-label="Наступна картка"
+              >
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </header>
+
+          <!-- Carousel -->
+          <div class="doctor-guide__viewport section-reveal">
+            <div class="doctor-guide__track">
+              <!-- 01 -->
+              <article class="doctor-card doctor-card--blue">
+                <span class="doctor-card__number">01</span>
+
+                <div class="doctor-card__body">
+                  <h3>
+                    Їжа повинна бути в радість, а не війною за кожну ложку
+                  </h3>
+
+                  <div class="doctor-card__info">
+                    <span class="doctor-card__label"> Що ви помічаєте </span>
+
+                    <p>
+                      Болить живіт, закрепи або проноси, їсть лише кілька
+                      продуктів, запах ацетону з рота, висипання на шкірі.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="doctor-card__footer">
+                  <div class="doctor-card__doctor">
+                    <span class="doctor-card__label"> До кого </span>
+
+                    <strong>Гастроентеролог</strong>
+                    <small>Дарія Семенюк</small>
+                  </div>
+
+                  <a
+                    class="action action--light doctor-card__action"
+                    href="#consultation"
+                  >
+                    <i
+                      class="bi bi-telephone-fill action__icon"
+                      aria-hidden="true"
+                    ></i>
+
+                    <span>Записатися</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- 02 -->
+              <article class="doctor-card doctor-card--cream">
+                <span class="doctor-card__number">02</span>
+
+                <div class="doctor-card__body">
+                  <h3>
+                    Ночі повинні давати відпочинок, а не нічні ігри і ранкову
+                    втому
+                  </h3>
+
+                  <div class="doctor-card__info">
+                    <span class="doctor-card__label"> Що ви помічаєте </span>
+
+                    <p>
+                      Погано спить і часто прокидається вночі; «завмирає» або
+                      здригається; м'язи дуже напружені або надто м'які; пізно
+                      сів чи пішов, незграбний у рухах.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="doctor-card__footer">
+                  <div class="doctor-card__doctor">
+                    <span class="doctor-card__label"> До кого </span>
+
+                    <strong>Невролог</strong>
+                    <small>Нічна ЕЕГ</small>
+                  </div>
+
+                  <a
+                    class="action action--light doctor-card__action"
+                    href="#consultation"
+                  >
+                    <i
+                      class="bi bi-telephone-fill action__icon"
+                      aria-hidden="true"
+                    ></i>
+
+                    <span>Записатися</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- 03 -->
+              <article class="doctor-card doctor-card--blue">
+                <span class="doctor-card__number">03</span>
+
+                <div class="doctor-card__body">
+                  <h3>
+                    Прогулянка має бути відпочинком, а не підготовкою до
+                    істерики на касі магазину
+                  </h3>
+
+                  <div class="doctor-card__info">
+                    <span class="doctor-card__label"> Що ви помічаєте </span>
+
+                    <p>
+                      Часті істерики, агресія, тривожність, важко заспокоїтися.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="doctor-card__footer">
+                  <div class="doctor-card__doctor">
+                    <span class="doctor-card__label"> До кого </span>
+
+                    <strong>Дитячий психіатр</strong>
+                  </div>
+
+                  <a
+                    class="action action--light doctor-card__action"
+                    href="#consultation"
+                  >
+                    <i
+                      class="bi bi-telephone-fill action__icon"
+                      aria-hidden="true"
+                    ></i>
+
+                    <span>Записатися</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- 04 -->
+              <article class="doctor-card doctor-card--cream">
+                <span class="doctor-card__number">04</span>
+
+                <div class="doctor-card__body">
+                  <h3>
+                    Ви повинні бачити стабільний розвиток, а не рахувати дні між
+                    «відкатами»
+                  </h3>
+
+                  <div class="doctor-card__info">
+                    <span class="doctor-card__label"> Що ви помічаєте </span>
+
+                    <p>
+                      Втрачає навички, які вже вмів; погано набирає вагу; після
+                      застуди стає дуже млявим.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="doctor-card__footer">
+                  <div class="doctor-card__doctor">
+                    <span class="doctor-card__label"> До кого </span>
+
+                    <strong>Метаболіст</strong>
+                    <small>Марина Пацьора</small>
+                  </div>
+
+                  <a
+                    class="action action--light doctor-card__action"
+                    href="#consultation"
+                  >
+                    <i
+                      class="bi bi-telephone-fill action__icon"
+                      aria-hidden="true"
+                    ></i>
+
+                    <span>Записатися</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- 05 -->
+              <article class="doctor-card doctor-card--blue">
+                <span class="doctor-card__number">05</span>
+
+                <div class="doctor-card__body">
+                  <h3>
+                    Заняття повинні давати прогрес, а не відчуття, що гроші
+                    йдуть в нікуди
+                  </h3>
+
+                  <div class="doctor-card__info">
+                    <span class="doctor-card__label"> Що ви помічаєте </span>
+
+                    <p>Не знаю, з чого почати.</p>
+                  </div>
+                </div>
+
+                <div class="doctor-card__footer">
+                  <div class="doctor-card__doctor">
+                    <span class="doctor-card__label"> До кого </span>
+
+                    <strong>Первинна консультація</strong>
+                    <small>Складемо маршрут</small>
+                  </div>
+
+                  <a
+                    class="action action--light doctor-card__action"
+                    href="#consultation"
+                  >
+                    <i
+                      class="bi bi-telephone-fill action__icon"
+                      aria-hidden="true"
+                    ></i>
+
+                    <span>Записатися</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Parents support -->
+          <div class="doctor-guide__parent section-reveal">
+            <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+
+            <p>
+              <strong>
+                Ви самі на межі — виснаження, тривога, немає сил?
+              </strong>
+
+              Підтримка батьків — консультація психіатра.
+            </p>
+
+            <a
+              class="action action--light doctor-guide__parent-action"
+              href="#consultation"
+            >
+              <i
+                class="bi bi-telephone-fill action__icon"
+                aria-hidden="true"
+              ></i>
+
+              <span>Отримати підтримку</span>
+            </a>
+          </div>
+
+          <!-- Metabolic check -->
+          <div class="metabolic-check section-reveal">
+            <div class="metabolic-check__intro">
+              <span class="section-label"> Самоперевірка </span>
+
+              <h3>
+                Коли варто перевірити
+                <em>обмін речовин</em>
+              </h3>
+
+              <p>
+                Якщо збігаються
+                <strong>два й більше пункти</strong> — це привід для
+                консультації метаболіста.
+              </p>
+            </div>
+
+            <ul class="metabolic-check__list">
+              <li>
+                <i class="bi bi-check2" aria-hidden="true"></i>
+
+                <span>
+                  Дитина втрачає навички, які вже вміла: слова, жести, ігри.
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check2" aria-hidden="true"></i>
+
+                <span>
+                  Після застуди стає дуже млявою, сонливою, відмовляється їсти.
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check2" aria-hidden="true"></i>
+
+                <span> Погано набирає вагу або відстає в рості. </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check2" aria-hidden="true"></i>
+
+                <span> Буває блювання без явної причини. </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check2" aria-hidden="true"></i>
+
+                <span>
+                  М'язи дуже слабкі або, навпаки, постійно напружені.
+                </span>
+              </li>
+
+              <li>
+                <i class="bi bi-check2" aria-hidden="true"></i>
+
+                <span>
+                  Відстає одразу в кількох сферах — і в рухах, і в мовленні.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="marquee" aria-label="Напрями роботи медичного центру">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>Бачимо дитину цілісно</span>
+            <i></i>
+            <span>Шукаємо причину</span>
+            <i></i>
+            <span>Будуємо маршрут</span>
+            <i></i>
+            <span>Працюємо командою</span>
+            <i></i>
+          </div>
+
+          <div class="marquee__group" aria-hidden="true">
+            <span>Бачимо дитину цілісно</span>
+            <i></i>
+            <span>Шукаємо причину</span>
+            <i></i>
+            <span>Будуємо маршрут</span>
+            <i></i>
+            <span>Працюємо командою</span>
+            <i></i>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
