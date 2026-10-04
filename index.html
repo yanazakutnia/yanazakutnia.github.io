@@ -20,7 +20,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body data-ga4-id="" data-meta-pixel-id="">
     <header class="header">
       <div class="container header__inner">
         <a
@@ -39,14 +39,27 @@
           ><a href="#contacts">Контакти</a>
         </nav>
 
-        <a
-          class="consult"
-          href="https://rozvitok-medcenter-bot.tg.pulse.is"
-          target="_blank"
-          aria-label="Записатись на консультацію"
-        >
-          <i class="bi bi-send-fill action__icon"></i><span>Записатись</span></a
-        >
+        <div class="header__actions">
+          <a
+            class="header__instagram"
+            href="https://www.instagram.com/dr.yanazakutnia?stkn=dHFtZjk5aG1uamw2"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram медичного центру"
+            ><i class="bi bi-instagram" aria-hidden="true"></i
+          ></a>
+          <a
+            class="consult"
+            href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
+            target="_blank"
+            rel="noopener"
+            data-track="booking"
+            data-placement="header"
+            aria-label="Записатись на консультацію"
+          >
+            <i class="bi bi-send-fill action__icon"></i><span>Записатись</span>
+          </a>
+        </div>
         <button
           class="burger"
           type="button"
@@ -66,13 +79,21 @@
           <p>Медичний центр для дітей та їхніх родин</p>
           <a
             class="mobile-menu__cta"
-            href="https://rozvitok-medcenter-bot.tg.pulse.is"
+            href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
             target="_blank"
           >
             <i class="bi bi-send-fill action__icon"></i
-            ><span>Записатись на консультацію</span
-            ><i class="bi bi-arrow-right" aria-hidden="true"></i
-          ></a>
+            ><span>Записатись на консультацію</span></a
+          >
+          <a
+            class="mobile-menu__instagram"
+            href="https://www.instagram.com/dr.yanazakutnia?stkn=dHFtZjk5aG1uamw2"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bi bi-instagram" aria-hidden="true"></i
+            ><span>Instagram</span>
+          </a>
         </div>
       </div>
     </header>
@@ -97,6 +118,8 @@
               <a
                 class="action action--light"
                 href="#development-check"
+                data-track="hero-card"
+                data-card-id="development_check"
                 rel="noopener"
               >
                 <i class="bi bi-send-fill action__icon"></i>
@@ -104,7 +127,10 @@
               </a>
               <a
                 class="action action--dark"
-                href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation&amp;utm_content=hero_plan"
+                data-track="hero-card"
+                data-card-id="booking"
+                data-placement="hero"
                 target="_blank"
               >
                 <i class="bi bi-send-fill action__icon"></i>
@@ -123,7 +149,7 @@
           <div class="hero__visual reveal">
             <div class="portrait">
               <img
-                src="img/doctor.png"
+                src="img/doctor.webp"
                 alt="Фахівчиня медичного центру Розвиток"
               />
             </div>
@@ -131,7 +157,7 @@
         </div>
       </section>
 
-      <section class="recognize" id="about">
+      <section class="recognize" id="recognize">
         <div class="container">
           <header class="recognize__head route-reveal">
             <p class="recognize__eyebrow">Впізнаєте себе?</p>
@@ -235,24 +261,20 @@
                 «особливості розвитку». Дитині призначають заняття і кажуть
                 займатися.
               </p>
-
               <p class="section-reveal">
-                Але іноді за цими проявами стоять медичні причини.
-                <strong>
-                  Часті — проблеми з кишківником, анемія, глистяні інвазії,
-                  інфекції. Рідкісні — генетичні та метаболічні захворювання.
-                </strong>
+                Але за цими проявами можуть стояти медичні стани. Одні ми
+                знаходимо часто: проблеми з кишківником, анемію, глистяні
+                інвазії, інфекції. Інші, генетичні чи метаболічні, трапляються
+                рідко, але пропускати їх не можна: для частини з них є окремі
+                підходи до лікування.
               </p>
-
-              <p class="section-reveal">
-                Частину таких станів не видно на звичайному прийомі. Саме тому
-                важливо оцінювати не лише поведінку чи розвиток, а й стан
-                здоров’я дитини в цілому.
-              </p>
-
               <p class="medical-reason__conclusion section-reveal">
-                Хворобу там, де її немає, ми не шукаємо.
-                <strong>Але й на діагноз усе не списуємо.</strong>
+                Тому ми дивимося на дитину як лікарі. Хворобу там, де її немає,
+                ми не шукаємо. Але й на діагноз усе не списуємо.
+                <strong
+                  >Виключаємо те, що не можна пропустити, і шукаємо те, що можна
+                  скоригувати.</strong
+                >
               </p>
             </div>
           </div>
@@ -476,7 +498,7 @@
 
                   <a
                     class="action action--light doctor-card__action"
-                    href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                    href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                     target="_blank"
                   >
                     <i
@@ -520,7 +542,7 @@
 
                   <a
                     class="action action--light doctor-card__action"
-                    href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                    href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                     target="_blank"
                   >
                     <i
@@ -561,7 +583,7 @@
 
                   <a
                     class="action action--light doctor-card__action"
-                    href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                    href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                     target="_blank"
                   >
                     <i
@@ -604,7 +626,7 @@
 
                   <a
                     class="action action--light doctor-card__action"
-                    href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                    href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                     target="_blank"
                   >
                     <i
@@ -644,7 +666,7 @@
 
                   <a
                     class="action action--light doctor-card__action"
-                    href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                    href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                     target="_blank"
                   >
                     <i
@@ -673,7 +695,7 @@
 
             <a
               class="action action--light doctor-guide__parent-action"
-              href="https://rozvitok-medcenter-bot.tg.pulse.is"
+              href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
               target="_blank"
             >
               <i class="bi bi-send-fill action__icon" aria-hidden="true"></i>
@@ -793,7 +815,7 @@
           <article class="team-director section-reveal">
             <div class="team-director__photo">
               <img
-                src="img/doctor.png"
+                src="img/doctor.webp"
                 alt="Закутня Яна Валеріївна"
                 loading="lazy"
               />
@@ -814,17 +836,6 @@
                 Формує клінічний підхід центру, відбирає лікарів у команду і
                 підключається до складних випадків за показами.
               </p>
-
-              <div class="team-director__meta">
-                <div>
-                  <span>Роль у центрі</span>
-                  <strong>Клінічний маршрут і командна робота</strong>
-                </div>
-                <div>
-                  <span>Підхід</span>
-                  <strong>Одна дитина — одна узгоджена картина</strong>
-                </div>
-              </div>
             </div>
           </article>
 
@@ -863,7 +874,7 @@
                     <img
                       alt="Красиленко Ірина Григоріївна"
                       loading="lazy"
-                      src="img/photo-02.png"
+                      src="img/photo-02.webp"
                     />
                   </div>
                   <div class="team-card__content">
@@ -890,7 +901,7 @@
                       </button>
                       <a
                         class="team-card__book"
-                        href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                        href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                         target="_blank"
                       >
                         <i class="bi bi-send-fill"></i>
@@ -940,7 +951,7 @@
                       </button>
                       <a
                         class="team-card__book"
-                        href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                        href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                         target="_blank"
                       >
                         <i class="bi bi-send-fill"></i>
@@ -963,7 +974,7 @@
                     <img
                       alt="Семенюк Дарія Борисівна"
                       loading="lazy"
-                      src="img/photo-01.png"
+                      src="img/photo-01.webp"
                     />
                   </div>
                   <div class="team-card__content">
@@ -992,7 +1003,7 @@
                       </button>
                       <a
                         class="team-card__book"
-                        href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                        href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                         target="_blank"
                       >
                         <i class="bi bi-send-fill"></i>
@@ -1017,7 +1028,7 @@
                     <img
                       alt="Пацьора Марина Ігорівна"
                       loading="lazy"
-                      src="img/photo-02.png"
+                      src="img/photo-02.webp"
                     />
                   </div>
                   <div class="team-card__content">
@@ -1048,7 +1059,7 @@
                       </button>
                       <a
                         class="team-card__book"
-                        href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                        href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                         target="_blank"
                       >
                         <i class="bi bi-send-fill"></i>
@@ -1104,7 +1115,7 @@
                       </button>
                       <a
                         class="team-card__book"
-                        href="https://rozvitok-medcenter-bot.tg.pulse.is"
+                        href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
                         target="_blank"
                       >
                         <i class="bi bi-send-fill"></i>
@@ -1182,7 +1193,7 @@
 
           <a
             class="team-modal__action"
-            href="https://rozvitok-medcenter-bot.tg.pulse.is"
+            href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
             target="_blank"
           >
             <i class="bi bi-send-fill"></i>
@@ -1226,18 +1237,15 @@
 
               <a
                 class="development-check__action"
-                href="https://t.me/"
+                href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=development_tables"
                 target="_blank"
                 rel="noopener"
+                data-track="telegram"
+                data-placement="development_tables"
               >
                 <i class="bi bi-send-fill" aria-hidden="true"></i>
 
                 <span>Отримати таблиці розвитку</span>
-
-                <i
-                  class="bi bi-arrow-right development-check__arrow"
-                  aria-hidden="true"
-                ></i>
               </a>
             </div>
           </div>
@@ -1251,6 +1259,7 @@
           </div>
         </div>
       </section>
+
       <section class="formats" id="consultation">
         <div class="container">
           <header class="section-head formats__head">
@@ -1340,36 +1349,38 @@
 
               <a
                 class="formats__bot-action"
-                href="https://t.me/"
+                href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation&amp;utm_content=formats"
                 target="_blank"
                 rel="noopener"
+                data-track="booking"
+                data-placement="formats"
               >
                 <i class="bi bi-send-fill"></i>
-                <span>Вартість і запис </span>
-                <i
-                  class="bi bi-arrow-right development-check__arrow"
-                  aria-hidden="true"
-                ></i>
+                <span>Вартість і запис — у боті</span>
               </a>
             </div>
 
-            <div class="formats__choose">
+            <div class="formats__choose formats__how-to">
               <div>
-                <span class="section-label">Не знаєте, з кого почати?</span>
-
-                <h3>
-                  Оберіть лікаря за тим,<br />
-                  <em>що турбує найбільше</em>
-                </h3>
+                <span class="section-label">Як записатися</span>
+                <h3>Два прості кроки до консультації</h3>
               </div>
-
-              <a class="formats__choose-action" href="#services">
-                <span>Обрати лікаря</span>
-                <i
-                  class="bi bi-arrow-right development-check__arrow"
-                  aria-hidden="true"
-                ></i>
-              </a>
+              <ol class="formats__steps">
+                <li>
+                  <strong>01</strong
+                  ><span
+                    >Оберіть лікаря за тим, що турбує найбільше
+                    <a href="#services">у блоці «Коли до кого»</a>.</span
+                  >
+                </li>
+                <li>
+                  <strong>02</strong
+                  ><span
+                    >Натисніть «Записатись»: бот покаже вартість, а асистент
+                    підкаже вільний час.</span
+                  >
+                </li>
+              </ol>
             </div>
           </div>
         </div>
@@ -1410,6 +1421,15 @@
                 </p>
               </div>
 
+              <div class="about-hero__item">
+                <strong>Для кого наш центр</strong>
+                <p>
+                  Для родин дітей із затримкою нейророзвитку, аутизмом, РДУГ та
+                  складними станами, коли потрібна не ще одна окрема думка, а
+                  зрозумілий послідовний маршрут між лікарями.
+                </p>
+              </div>
+
               <div class="about-hero__story">
                 <p>
                   До «Розвитку» я була медичним директором іншого медичного
@@ -1438,7 +1458,7 @@
           <div class="about-hero__visual section-reveal">
             <div class="about-hero__portrait">
               <img
-                src="img/doctor.png"
+                src="img/doctor.webp"
                 alt="Закутня Яна Валеріївна"
                 loading="lazy"
               />
@@ -1448,6 +1468,31 @@
               <strong>Закутня Яна Валеріївна</strong>
               <span>Керівниця медичного центру «Розвиток»</span>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="marquee" aria-label="Напрями роботи медичного центру">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>Бачимо дитину цілісно</span>
+            <i></i>
+            <span>Шукаємо причину</span>
+            <i></i>
+            <span>Будуємо маршрут</span>
+            <i></i>
+            <span>Працюємо командою</span>
+            <i></i>
+          </div>
+
+          <div class="marquee__group" aria-hidden="true">
+            <span>Бачимо дитину цілісно</span>
+            <i></i>
+            <span>Шукаємо причину</span>
+            <i></i>
+            <span>Будуємо маршрут</span>
+            <i></i>
+            <span>Працюємо командою</span>
+            <i></i>
           </div>
         </div>
       </section>
@@ -1751,7 +1796,131 @@
           </div>
         </div>
       </section>
+
+      <!-- STAGE 2: Навчання для батьків. Місце зарезервовано за ТЗ; наповнення буде додано окремо. -->
+      <section
+        class="stage-two-placeholder"
+        id="parent-education"
+        hidden
+        aria-hidden="true"
+      ></section>
+
+      <section class="final-cta">
+        <div class="container final-cta__inner">
+          <div class="final-cta__layout">
+            <div class="final-cta__copy">
+              <h2 class="final-cta__title section-reveal">
+                Коли є маршрут, наступний крок стає зрозумілим.
+              </h2>
+            </div>
+            <div class="final-cta__side section-reveal">
+              <p class="final-cta__text">
+                Перш ніж витратити наступні гроші на ще один аналіз чи ще одного
+                спеціаліста — <strong>отримайте маршрут.</strong>
+              </p>
+              <div class="final-cta__actions">
+                <a
+                  class="action action--light final-cta__action"
+                  href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation&amp;utm_content=final_booking"
+                  target="_blank"
+                  rel="noopener"
+                  data-track="booking"
+                  data-placement="final_cta"
+                >
+                  <i class="bi bi-send-fill action__icon" aria-hidden="true"></i
+                  ><span>Записатися</span>
+                </a>
+                <a
+                  class="action action--dark final-cta__action final-cta__action--dark"
+                  href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation&amp;utm_content=final_telegram"
+                  target="_blank"
+                  rel="noopener"
+                  data-track="telegram"
+                  data-placement="final_cta"
+                >
+                  <i class="bi bi-telegram action__icon" aria-hidden="true"></i
+                  ><span>Написати в Telegram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer" id="contacts">
+      <div class="container footer__inner">
+        <div class="footer__main">
+          <div class="footer__brand">
+            <a
+              class="brand brand--signature footer__logo"
+              href="#top"
+              aria-label="Розвиток — медичний центр"
+            >
+              <span class="brand__word">
+                <span class="brand__accent">Розвиток</span>
+              </span>
+              <small>медичний центр</small>
+            </a>
+          </div>
+
+          <div class="footer__navigation">
+            <p class="footer__label">Навігація</p>
+
+            <nav class="footer__nav" aria-label="Навігація в підвалі">
+              <a href="#about">Про нас</a>
+              <a href="#team">Команда</a>
+              <a href="#services">Послуги</a>
+              <a href="#process">Як ми працюємо</a>
+              <a href="#contacts">Контакти</a>
+            </nav>
+          </div>
+
+          <div class="footer__contact">
+            <p class="footer__label">Зв'язок</p>
+
+            <p class="footer__contact-text">
+              Запис на консультацію та зв'язок із центром
+            </p>
+
+            <div class="footer__socials">
+              <a
+                class="footer__social"
+                href="https://rozvitok-medcenter-bot.tg.pulse.is?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=consultation"
+                target="_blank"
+                rel="noopener"
+                aria-label="Telegram"
+              >
+                <i class="bi bi-telegram"></i>
+                <span>Telegram</span>
+              </a>
+
+              <a
+                class="footer__social"
+                href="https://www.instagram.com/dr.yanazakutnia?stkn=dHFtZjk5aG1uamw2"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >
+                <i class="bi bi-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__warning">
+          <i class="bi bi-exclamation-circle-fill" aria-hidden="true"></i>
+
+          <p>Самолікування може бути шкідливим для вашого здоров'я</p>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Медичний центр «Розвиток»</p>
+
+          <p>Всі права захищені</p>
+        </div>
+      </div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>

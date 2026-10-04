@@ -546,3 +546,66 @@ if (faqItems.length) {
     });
   });
 }
+
+/* =========================================================
+   ANALYTICS — privacy-safe CTA events
+   Add IDs to <body data-ga4-id="G-..." data-meta-pixel-id="..."> to activate.
+========================================================= */
+(() => {
+  const body = document.body;
+  const ga4Id = body?.dataset.ga4Id?.trim();
+  const metaPixelId = body?.dataset.metaPixelId?.trim();
+
+  if (ga4Id) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ga4Id)}`;
+    document.head.appendChild(script);
+    window.gtag("js", new Date());
+    window.gtag("config", ga4Id, { anonymize_ip: true });
+  }
+
+  if (metaPixelId) {
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+      if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = true; n.version = "2.0"; n.queue = [];
+      t = b.createElement(e); t.async = true; t.src = v;
+      s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+    })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    window.fbq("init", metaPixelId);
+    window.fbq("track", "PageView");
+  }
+
+  const emit = (name, params = {}) => {
+    const safeParams = {
+      placement: params.placement || "unknown",
+      card_id: params.card_id || undefined,
+      destination: params.destination || undefined,
+    };
+    if (typeof window.gtag === "function" && ga4Id) window.gtag("event", name, safeParams);
+    if (typeof window.fbq === "function" && metaPixelId) window.fbq("trackCustom", name, safeParams);
+  };
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a");
+    if (!link) return;
+
+    const href = link.getAttribute("href") || "";
+    const placement = link.dataset.placement ||
+      (link.closest(".hero") ? "hero" : link.closest(".footer") ? "footer" : link.closest(".team") ? "team" : "site");
+
+    if (link.dataset.track === "hero-card") {
+      emit("hero_card_click", { placement, card_id: link.dataset.cardId || "unknown" });
+    }
+
+    const isTelegram = href.includes("rozvitok-medcenter-bot.tg.pulse.is");
+    const isBooking = link.dataset.track === "booking" || /Запис|Вартість і запис/i.test(link.textContent || "");
+
+    if (isBooking) emit("booking_click", { placement });
+    if (isTelegram) emit("telegram_bot_click", { placement, destination: "telegram_bot" });
+  });
+})();
