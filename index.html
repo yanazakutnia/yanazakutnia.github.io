@@ -88,16 +88,15 @@
             <div class="hero__route reveal"><em>маршрут</em></div>
             <p class="hero__lead reveal">
               Для дітей із затримкою нейророзвитку, аутизмом, РДУГ — від першої
-              тривоги до чіткого плану. Команда лікарів під одним дахом:
-              неврологи, психіатри, гастроентерологи, метаболіст, дитячі
-              дієтологи, генетики.
+              тривоги до чіткого плану. Команда лікарів веде дитину одним
+              маршрутом: невролог, психіатр, гастроентеролог, метаболіст,
+              дитячий дієтолог, генетик.
             </p>
 
             <div class="hero__actions reveal">
               <a
                 class="action action--light"
-                href="https://rozvitok-medcenter-bot.tg.pulse.is"
-                target="_blank"
+                href="#development-check"
                 rel="noopener"
               >
                 <i class="bi bi-send-fill action__icon"></i>
@@ -238,19 +237,22 @@
               </p>
 
               <p class="section-reveal">
-                Але за цими проявами можуть стояти медичні стани:
+                Але іноді за цими проявами стоять медичні причини.
                 <strong>
-                  порушення обміну речовин, генетичні причини, проблеми з
-                  кишківником, неврологічні порушення.
+                  Часті — проблеми з кишківником, анемія, глистяні інвазії,
+                  інфекції. Рідкісні — генетичні та метаболічні захворювання.
                 </strong>
-                На звичайному прийомі їх не видно, і стандартно на них не
-                обстежують. Такі стани трапляються не так часто, але пропускати
-                їх не можна: для частини з них є окремі підходи до лікування.
+              </p>
+
+              <p class="section-reveal">
+                Частину таких станів не видно на звичайному прийомі. Саме тому
+                важливо оцінювати не лише поведінку чи розвиток, а й стан
+                здоров’я дитини в цілому.
               </p>
 
               <p class="medical-reason__conclusion section-reveal">
-                Тому ми дивимося на дитину як лікарі: виключаємо те, що треба
-                виключити, і шукаємо те, що можна скоригувати.
+                Хворобу там, де її немає, ми не шукаємо.
+                <strong>Але й на діагноз усе не списуємо.</strong>
               </p>
             </div>
           </div>
@@ -770,28 +772,69 @@
           </div>
         </div>
       </section>
-      <section class="team" id="team">
+
+      <section class="team team--editorial" id="team">
         <div class="container">
-          <!-- HEAD -->
-          <header class="section-head team__head">
+          <header class="section-head team__head team__head--editorial">
             <div class="team__heading section-reveal">
               <p class="section-label">Команда</p>
-
               <h2 class="section-heading">
-                Лікарі центру,<br />
-                <em>яким довіряють</em>
+                Лікарі, які бачать<br />
+                <em>одну картину</em>
               </h2>
             </div>
 
             <p class="team__intro section-reveal">
-              Одна команда, спільний клінічний підхід і увага до всієї картини —
-              від першої тривоги до зрозумілого маршруту.
+              Кожен відповідає за свою частину. Складні випадки обговорюємо
+              разом, щоб дитина отримувала один послідовний маршрут.
             </p>
+          </header>
 
-            <div
-              class="team-nav section-reveal"
-              aria-label="Навігація каруселі"
-            >
+          <article class="team-director section-reveal">
+            <div class="team-director__photo">
+              <img
+                src="img/doctor.png"
+                alt="Закутня Яна Валеріївна"
+                loading="lazy"
+              />
+              <span class="team-director__badge">Керівниця центру</span>
+            </div>
+
+            <div class="team-director__body">
+              <div class="team-director__topline">
+                <p class="team-director__kicker">Керівниця медичного центру</p>
+              </div>
+
+              <div class="team-director__identity">
+                <h3>Закутня Яна Валеріївна</h3>
+                <p>Лікар-гастроентеролог · Сімейний лікар</p>
+              </div>
+
+              <p class="team-director__statement">
+                Формує клінічний підхід центру, відбирає лікарів у команду і
+                підключається до складних випадків за показами.
+              </p>
+
+              <div class="team-director__meta">
+                <div>
+                  <span>Роль у центрі</span>
+                  <strong>Клінічний маршрут і командна робота</strong>
+                </div>
+                <div>
+                  <span>Підхід</span>
+                  <strong>Одна дитина — одна узгоджена картина</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="team-doctors-head section-reveal">
+            <div>
+              <p class="section-label">Лікарі центру</p>
+              <h3>Фахівці поруч на кожному етапі</h3>
+            </div>
+
+            <div class="team-nav" aria-label="Навігація каруселі лікарів">
               <button
                 class="team-nav__button team-prev"
                 type="button"
@@ -800,7 +843,7 @@
                 <i class="bi bi-arrow-left"></i>
               </button>
 
-              <span class="team-nav__count"> <strong>01</strong> / 06 </span>
+              <span class="team-nav__count"><strong>01</strong> / 05</span>
 
               <button
                 class="team-nav__button team-next"
@@ -810,128 +853,51 @@
                 <i class="bi bi-arrow-right"></i>
               </button>
             </div>
-          </header>
+          </div>
 
-          <!-- CAROUSEL -->
           <div class="team-slider section-reveal">
             <div class="team-slider__viewport">
               <div class="team-slider__track">
-                <!-- ЗАКУТНЯ -->
                 <article class="team-card">
                   <div class="team-card__photo">
                     <img
-                      src="img/doctor.png"
-                      alt="Закутня Яна Валеріївна"
-                      loading="lazy"
-                    />
-
-                    <span class="team-card__role"> Керівниця центру </span>
-                  </div>
-
-                  <div class="team-card__content">
-                    <h3>Закутня Яна Валеріївна</h3>
-
-                    <p class="team-card__speciality">
-                      Лікар-гастроентеролог · Сімейний лікар
-                    </p>
-
-                    <dl class="team-card__facts">
-                      <div>
-                        <dt>Посада</dt>
-                        <dd>Керівниця медичного центру «Розвиток»</dd>
-                      </div>
-
-                      <div>
-                        <dt>Стаж</dt>
-                        <dd>—</dd>
-                      </div>
-
-                      <div>
-                        <dt>Фокус</dt>
-                        <dd>Клінічний маршрут · складні випадки</dd>
-                      </div>
-                    </dl>
-
-                    <div class="team-card__actions">
-                      <button class="team-card__more" type="button">
-                        <span>З чим звертатися</span>
-                        <i class="bi bi-arrow-right"></i>
-                      </button>
-
-                      <a
-                        href="https://rozvitok-medcenter-bot.tg.pulse.is"
-                        target="_blank"
-                        class="team-card__book"
-                      >
-                        <i class="bi bi-send-fill"></i>
-                        <span>Записатися</span>
-                      </a>
-                    </div>
-
-                    <div class="team-card__modal-content" hidden>
-                      <p>
-                        До відкриття «Розвитку» була медичним директором
-                        медичного центру.
-                      </p>
-
-                      <p>
-                        Формує клінічний підхід центру, відбирає лікарів у
-                        команду і підключається до складних випадків за
-                        показами.
-                      </p>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- КРАСИЛЕНКО -->
-                <article class="team-card">
-                  <div class="team-card__photo">
-                    <img
-                      src="img/photo-02.png"
                       alt="Красиленко Ірина Григоріївна"
                       loading="lazy"
+                      src="img/photo-02.png"
                     />
                   </div>
-
                   <div class="team-card__content">
                     <h3>Красиленко Ірина Григоріївна</h3>
-
                     <p class="team-card__speciality">Дитячий невролог</p>
-
                     <dl class="team-card__facts">
                       <div>
                         <dt>Місце роботи / посада</dt>
                         <dd>—</dd>
                       </div>
-
                       <div>
                         <dt>Стаж</dt>
                         <dd>—</dd>
                       </div>
-
                       <div>
                         <dt>Вузький фокус</dt>
                         <dd>Епілепсія · ЕЕГ · моторний розвиток</dd>
                       </div>
                     </dl>
-
                     <div class="team-card__actions">
                       <button class="team-card__more" type="button">
                         <span>З чим звертатися</span>
                         <i class="bi bi-arrow-right"></i>
                       </button>
-
                       <a
+                        class="team-card__book"
                         href="https://rozvitok-medcenter-bot.tg.pulse.is"
                         target="_blank"
-                        class="team-card__book"
                       >
                         <i class="bi bi-send-fill"></i>
                         <span>Записатися</span>
                       </a>
                     </div>
-
-                    <div class="team-card__modal-content" hidden>
+                    <div class="team-card__modal-content" hidden="">
                       <ul>
                         <li>Підбір і корекція терапії при епілепсії.</li>
                         <li>Судоми, нічні пробудження, мимовільні рухи.</li>
@@ -940,122 +906,100 @@
                           Моторний розвиток і тонус у дітей раннього віку.
                         </li>
                       </ul>
-
                       <p><strong>Регалії:</strong> —</p>
                     </div>
                   </div>
                 </article>
-
-                <!-- МОЗГОВИЙ -->
                 <article class="team-card">
                   <div class="team-card__photo team-card__photo--placeholder">
                     <span>Фото —</span>
                   </div>
-
                   <div class="team-card__content">
                     <h3>Мозговий Вадим Олександрович</h3>
-
                     <p class="team-card__speciality">
                       Психіатр дитячий і дорослий
                     </p>
-
                     <dl class="team-card__facts">
                       <div>
                         <dt>Місце роботи / посада</dt>
                         <dd>—</dd>
                       </div>
-
                       <div>
                         <dt>Стаж</dt>
                         <dd>21 рік</dd>
                       </div>
-
                       <div>
                         <dt>Вузький фокус</dt>
                         <dd>Емоційний стан · поведінка · розвиток</dd>
                       </div>
                     </dl>
-
                     <div class="team-card__actions">
                       <button class="team-card__more" type="button">
                         <span>З чим звертатися</span>
                         <i class="bi bi-arrow-right"></i>
                       </button>
-
                       <a
+                        class="team-card__book"
                         href="https://rozvitok-medcenter-bot.tg.pulse.is"
                         target="_blank"
-                        class="team-card__book"
                       >
                         <i class="bi bi-send-fill"></i>
                         <span>Записатися</span>
                       </a>
                     </div>
-
-                    <div class="team-card__modal-content" hidden>
+                    <div class="team-card__modal-content" hidden="">
                       <ul>
                         <li>Оцінка емоційного стану, поведінки і розвитку.</li>
                         <li>Стратегія підтримки без зайвої медикації.</li>
                         <li>Друга думка щодо поточного лікування.</li>
                         <li>Підтримка батьків.</li>
                       </ul>
-
                       <p><strong>Регалії:</strong> —</p>
                     </div>
                   </div>
                 </article>
-
-                <!-- СЕМЕНЮК -->
                 <article class="team-card">
                   <div class="team-card__photo">
                     <img
-                      src="img/photo-01.png"
                       alt="Семенюк Дарія Борисівна"
                       loading="lazy"
+                      src="img/photo-01.png"
                     />
                   </div>
-
                   <div class="team-card__content">
                     <h3>Семенюк Дарія Борисівна</h3>
-
                     <p class="team-card__speciality">
                       Дитячий гастроентеролог · Педіатр
                     </p>
-
                     <dl class="team-card__facts">
                       <div>
                         <dt>Місце роботи / посада</dt>
                         <dd>—</dd>
                       </div>
-
                       <div>
                         <dt>Стаж</dt>
                         <dd>17 років</dd>
                       </div>
-
                       <div>
                         <dt>Вузький фокус</dt>
                         <dd>ШКТ · харчування · гастрометаболічні обстеження</dd>
                       </div>
                     </dl>
-
                     <div class="team-card__actions">
                       <button class="team-card__more" type="button">
                         <span>З чим звертатися</span>
                         <i class="bi bi-arrow-right"></i>
                       </button>
-
                       <a
+                        class="team-card__book"
                         href="https://rozvitok-medcenter-bot.tg.pulse.is"
                         target="_blank"
-                        class="team-card__book"
                       >
                         <i class="bi bi-send-fill"></i>
                         <span>Записатися</span>
                       </a>
                     </div>
-
-                    <div class="team-card__modal-content" hidden>
+                    <div class="team-card__modal-content" hidden="">
                       <ul>
                         <li>Болі в животі, закрепи.</li>
                         <li>Вибірковість у їжі.</li>
@@ -1064,40 +1008,32 @@
                           направленням в Охматдит.
                         </li>
                       </ul>
-
                       <p><strong>Регалії:</strong> —</p>
                     </div>
                   </div>
                 </article>
-
-                <!-- ПАЦЬОРА -->
                 <article class="team-card">
                   <div class="team-card__photo">
                     <img
-                      src="img/photo-02.png"
                       alt="Пацьора Марина Ігорівна"
                       loading="lazy"
+                      src="img/photo-02.png"
                     />
                   </div>
-
                   <div class="team-card__content">
                     <h3>Пацьора Марина Ігорівна</h3>
-
                     <p class="team-card__speciality">
                       Педіатр · Дієтолог · Лікар-метаболіст
                     </p>
-
                     <dl class="team-card__facts">
                       <div>
                         <dt>Місце роботи / посада</dt>
                         <dd>Центр орфанних захворювань НДСЛ «Охматдит»</dd>
                       </div>
-
                       <div>
                         <dt>Стаж</dt>
                         <dd>—</dd>
                       </div>
-
                       <div>
                         <dt>Вузький фокус</dt>
                         <dd>
@@ -1105,24 +1041,21 @@
                         </dd>
                       </div>
                     </dl>
-
                     <div class="team-card__actions">
                       <button class="team-card__more" type="button">
                         <span>З чим звертатися</span>
                         <i class="bi bi-arrow-right"></i>
                       </button>
-
                       <a
+                        class="team-card__book"
                         href="https://rozvitok-medcenter-bot.tg.pulse.is"
                         target="_blank"
-                        class="team-card__book"
                       >
                         <i class="bi bi-send-fill"></i>
                         <span>Записатися</span>
                       </a>
                     </div>
-
-                    <div class="team-card__modal-content" hidden>
+                    <div class="team-card__modal-content" hidden="">
                       <ul>
                         <li>Виключити спадкові порушення обміну.</li>
                         <li>
@@ -1135,7 +1068,6 @@
                         </li>
                         <li>Спеціальне харчування.</li>
                       </ul>
-
                       <p>
                         Член групи експертів МОЗ з розробки національних
                         протоколів щодо рідкісних захворювань. Куратор
@@ -1144,52 +1076,42 @@
                     </div>
                   </div>
                 </article>
-
-                <!-- АДАМЕНКО -->
                 <article class="team-card">
                   <div class="team-card__photo team-card__photo--placeholder">
                     <span>Фото —</span>
                   </div>
-
                   <div class="team-card__content">
                     <h3>Адаменко Катерина Борисівна</h3>
-
                     <p class="team-card__speciality">Дитячий невролог</p>
-
                     <dl class="team-card__facts">
                       <div>
                         <dt>Місце роботи / посада</dt>
                         <dd>—</dd>
                       </div>
-
                       <div>
                         <dt>Стаж</dt>
                         <dd>—</dd>
                       </div>
-
                       <div>
                         <dt>Вузький фокус</dt>
                         <dd>—</dd>
                       </div>
                     </dl>
-
                     <div class="team-card__actions">
                       <button class="team-card__more" type="button">
                         <span>З чим звертатися</span>
                         <i class="bi bi-arrow-right"></i>
                       </button>
-
                       <a
+                        class="team-card__book"
                         href="https://rozvitok-medcenter-bot.tg.pulse.is"
                         target="_blank"
-                        class="team-card__book"
                       >
                         <i class="bi bi-send-fill"></i>
                         <span>Записатися</span>
                       </a>
                     </div>
-
-                    <div class="team-card__modal-content" hidden>
+                    <div class="team-card__modal-content" hidden="">
                       <p>—</p>
                     </div>
                   </div>
@@ -1198,11 +1120,9 @@
             </div>
           </div>
 
-          <!-- BOTTOM -->
           <div class="team-bottom section-reveal">
             <div class="team-progress" aria-hidden="true">
               <span class="is-active"></span>
-              <span></span>
               <span></span>
               <span></span>
               <span></span>
@@ -1218,7 +1138,7 @@
                 <i class="bi bi-arrow-left"></i>
               </button>
 
-              <span class="team-mobile-count"> <strong>01</strong> / 06 </span>
+              <span class="team-mobile-count"><strong>01</strong> / 05</span>
 
               <button
                 class="team-mobile-nav__button team-mobile-next"
@@ -1319,10 +1239,6 @@
                   aria-hidden="true"
                 ></i>
               </a>
-
-              <p class="development-check__note">
-                Таблиці відкриються в Telegram-боті
-              </p>
             </div>
           </div>
 

@@ -430,83 +430,55 @@ const teamModal = document.querySelector(".team-modal");
 
 if (teamModal) {
   const modalTitle = teamModal.querySelector(".team-modal__title");
-
   const modalSpeciality = teamModal.querySelector(".team-modal__speciality");
-
   const modalBody = teamModal.querySelector(".team-modal__body");
-
   const modalClose = teamModal.querySelector(".team-modal__close");
 
   let lastTrigger = null;
 
-  /* OPEN */
-
   const openTeamModal = (card, trigger) => {
-    const name = card.querySelector("h3")?.textContent.trim() || "";
+    if (!card) return;
 
+    const name = card.querySelector("h3")?.textContent.trim() || "";
     const speciality =
       card.querySelector(".team-card__speciality")?.textContent.trim() || "";
-
     const content = card.querySelector(".team-card__modal-content");
 
-    modalTitle.textContent = name;
-
-    modalSpeciality.textContent = speciality;
-
-    modalBody.innerHTML = content?.innerHTML || "<p>—</p>";
+    if (modalTitle) modalTitle.textContent = name;
+    if (modalSpeciality) modalSpeciality.textContent = speciality;
+    if (modalBody) {
+      modalBody.innerHTML =
+        content?.innerHTML || "<p>Інформація уточнюється.</p>";
+    }
 
     lastTrigger = trigger;
-
     teamModal.classList.add("is-open");
-
     teamModal.setAttribute("aria-hidden", "false");
-
     document.body.classList.add("team-modal-open");
 
-    requestAnimationFrame(() => {
-      modalClose?.focus();
-    });
+    requestAnimationFrame(() => modalClose?.focus());
   };
-
-  /* CLOSE */
 
   const closeTeamModal = () => {
     teamModal.classList.remove("is-open");
-
     teamModal.setAttribute("aria-hidden", "true");
-
     document.body.classList.remove("team-modal-open");
-
     lastTrigger?.focus();
   };
 
-  /* OPEN BUTTONS */
-
   document.querySelectorAll(".team-card__more").forEach((button) => {
     button.addEventListener("click", () => {
-      const card = button.closest(".team-card");
-
-      if (!card) {
-        return;
-      }
-
-      openTeamModal(card, button);
+      openTeamModal(button.closest(".team-card"), button);
     });
   });
-
-  /* CLOSE */
 
   teamModal.querySelectorAll("[data-team-close]").forEach((element) => {
     element.addEventListener("click", closeTeamModal);
   });
 
-  /* MODAL BOOK */
-
   teamModal
     .querySelector(".team-modal__action")
     ?.addEventListener("click", closeTeamModal);
-
-  /* ESC */
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && teamModal.classList.contains("is-open")) {
@@ -514,6 +486,7 @@ if (teamModal) {
     }
   });
 }
+
 /* =========================================================
    FORMATS REVEAL
 ========================================================= */

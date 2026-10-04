@@ -899,7 +899,6 @@ img {
 
 .hero__note .bi {
   flex: 0 0 auto;
-  margin-top: 10px;
   color: var(--color-primary);
   font-size: 14px;
   line-height: 1;
@@ -5553,5 +5552,333 @@ body.team-modal-open {
 
   .faq__item.is-open .faq__answer-inner {
     padding-bottom: 24px;
+  }
+}
+
+/* =========================================================
+   TEAM — EDITORIAL REFINEMENT
+   Isolated overrides: keeps the existing card/modal system.
+========================================================= */
+
+.team--editorial {
+  background: #fff;
+}
+
+.team__head--editorial {
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: end;
+  gap: 64px;
+  margin-bottom: 56px;
+}
+
+.team__head--editorial .team__intro {
+  max-width: 360px;
+  margin: 0 0 6px;
+}
+
+.team-director {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.82fr) minmax(0, 1.18fr);
+  min-height: 540px;
+  overflow: hidden;
+  border-radius: 34px;
+  background: var(--color-accent);
+}
+
+.team-director__photo {
+  position: relative;
+  min-height: 540px;
+  overflow: hidden;
+  background: var(--color-accent);
+}
+
+.team-director__photo img {
+  position: absolute;
+  right: 3%;
+  bottom: 0;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+.team-director__badge {
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--color-white);
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+}
+
+.team-director__body {
+  display: flex;
+  flex-direction: column;
+  padding: 46px 50px 44px;
+}
+
+.team-director__topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+
+.team-director__kicker,
+.team-director__topline > span {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.team-director__topline > span {
+  opacity: 0.38;
+}
+
+.team-director__identity {
+  padding-top: 42px;
+}
+
+.team-director__identity h3 {
+  max-width: 620px;
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: clamp(44px, 4.3vw, 64px);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -2.7px;
+}
+
+.team-director__identity > p {
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  opacity: 0.62;
+}
+
+.team-director__statement {
+  max-width: 590px;
+  margin: 34px 0 0;
+  font-family: var(--font-accent);
+  font-size: clamp(19px, 1.8vw, 24px);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.team-director__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 32px;
+  margin-top: auto;
+  padding-top: 42px;
+}
+
+.team-director__meta div {
+  padding-top: 15px;
+  border-top: 1px solid var(--color-line);
+}
+
+.team-director__meta span {
+  display: block;
+  margin-bottom: 7px;
+  font-family: var(--font-title);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+.team-director__meta strong {
+  display: block;
+  max-width: 260px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.team-doctors-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 48px;
+  margin: 104px 0 40px;
+}
+
+.team-doctors-head .section-label {
+  margin-bottom: 14px;
+}
+
+.team-doctors-head h3 {
+  max-width: 720px;
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.team--editorial .team-slider {
+  margin-top: 0;
+}
+
+.team--editorial .team-card {
+  border-radius: 26px;
+}
+
+.team--editorial .team-card__photo {
+  border-radius: 20px;
+}
+
+@media (max-width: 1100px) {
+  .team__head--editorial {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 40px;
+  }
+
+  .team-director {
+    grid-template-columns: 44% 56%;
+    min-height: 500px;
+  }
+
+  .team-director__photo {
+    min-height: 500px;
+  }
+
+  .team-director__body {
+    padding: 38px 34px;
+  }
+
+  .team-director__identity {
+    padding-top: 34px;
+  }
+
+  .team-director__identity h3 {
+    font-size: 46px;
+  }
+
+  .team-director__meta {
+    padding-top: 32px;
+  }
+
+  .team-doctors-head {
+    margin-top: 88px;
+  }
+}
+
+@media (max-width: 820px) {
+  .team__head--editorial {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .team__head--editorial .team__intro {
+    max-width: 520px;
+    margin-top: 22px;
+  }
+
+  .team-director {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border-radius: 26px;
+  }
+
+  .team-director__photo {
+    min-height: 430px;
+  }
+
+  .team-director__photo img {
+    right: 10%;
+    height: 100%;
+  }
+  .team-director__kicker {
+    display: none;
+  }
+  .team-director__badge {
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  .team-director__body {
+    padding: 30px 22px 32px;
+  }
+
+  .team-director__topline {
+    padding-bottom: 18px;
+  }
+
+  .team-director__identity {
+    padding-top: 0;
+  }
+
+  .team-director__identity h3 {
+    font-size: clamp(38px, 11vw, 50px);
+    letter-spacing: -2px;
+  }
+
+  .team-director__statement {
+    margin-top: 26px;
+    font-size: 18px;
+  }
+
+  .team-director__meta {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 32px;
+    padding-top: 0;
+  }
+
+  .team-doctors-head {
+    display: block;
+    margin: 72px 0 32px;
+  }
+
+  .team-doctors-head h3 {
+    font-size: clamp(34px, 9vw, 44px);
+    letter-spacing: -1.5px;
+  }
+
+  .team-doctors-head .team-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .team-director__photo {
+    min-height: 370px;
+  }
+
+  .team-director__body {
+    padding-inline: 18px;
+  }
+
+  .team-director__identity h3 {
+    font-size: 38px;
+  }
+
+  .team-director__statement {
+    font-size: 17px;
   }
 }
