@@ -86,6 +86,7 @@ const doctorGuide = document.querySelector(".doctor-guide");
 
 if (doctorGuide) {
   const track = doctorGuide.querySelector(".doctor-guide__track");
+  const viewport = doctorGuide.querySelector(".doctor-guide__viewport");
   const cards = [...doctorGuide.querySelectorAll(".doctor-card")];
 
   const prev = doctorGuide.querySelector(".doctor-guide__prev");
@@ -134,6 +135,101 @@ if (doctorGuide) {
     if (index >= maxIndex) return;
 
     index += 1;
+    updateCarousel();
+  });
+
+  /* SWIPE — DOCTOR GUIDE */
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchCurrentX = 0;
+  let touchCurrentY = 0;
+  let isDragging = false;
+
+  const getDistance = () => {
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    return index * (cardWidth + 16);
+  };
+
+  viewport.addEventListener(
+    "touchstart",
+    (event) => {
+      if (window.innerWidth > 820) return;
+
+      const touch = event.touches[0];
+
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+      touchCurrentX = touchStartX;
+      touchCurrentY = touchStartY;
+
+      isDragging = true;
+      track.style.transition = "none";
+    },
+    { passive: true },
+  );
+
+  viewport.addEventListener(
+    "touchmove",
+    (event) => {
+      if (window.innerWidth > 820 || !isDragging) return;
+
+      const touch = event.touches[0];
+
+      touchCurrentX = touch.clientX;
+      touchCurrentY = touch.clientY;
+
+      const deltaX = touchCurrentX - touchStartX;
+      const deltaY = touchCurrentY - touchStartY;
+
+      if (Math.abs(deltaY) > Math.abs(deltaX)) return;
+
+      const maxIndex = Math.max(0, cards.length - visibleCards());
+
+      let dragDistance = deltaX;
+
+      if ((index === 0 && deltaX > 0) || (index === maxIndex && deltaX < 0)) {
+        dragDistance *= 0.24;
+      }
+
+      track.style.transform = `translate3d(${-getDistance() + dragDistance}px, 0, 0)`;
+    },
+    { passive: true },
+  );
+
+  viewport.addEventListener("touchend", () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    const deltaX = touchCurrentX - touchStartX;
+    const deltaY = touchCurrentY - touchStartY;
+
+    const threshold = Math.min(
+      70,
+      cards[0].getBoundingClientRect().width * 0.16,
+    );
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      const maxIndex = Math.max(0, cards.length - visibleCards());
+
+      if (deltaX < -threshold && index < maxIndex) {
+        index++;
+      } else if (deltaX > threshold && index > 0) {
+        index--;
+      }
+    }
+
+    track.style.transition = "transform 0.56s cubic-bezier(0.22, 1, 0.36, 1)";
+
+    updateCarousel();
+  });
+
+  viewport.addEventListener("touchcancel", () => {
+    isDragging = false;
+
+    track.style.transition = "transform 0.56s cubic-bezier(0.22, 1, 0.36, 1)";
+
     updateCarousel();
   });
 
@@ -558,7 +654,11 @@ if (faqItems.length) {
 
   if (ga4Id) {
     window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    window.gtag =
+      window.gtag ||
+      function () {
+        window.dataLayer.push(arguments);
+      };
     const script = document.createElement("script");
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ga4Id)}`;
@@ -570,12 +670,27 @@ if (faqItems.length) {
   if (metaPixelId) {
     !(function (f, b, e, v, n, t, s) {
       if (f.fbq) return;
-      n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
       if (!f._fbq) f._fbq = n;
-      n.push = n; n.loaded = true; n.version = "2.0"; n.queue = [];
-      t = b.createElement(e); t.async = true; t.src = v;
-      s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
-    })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      n.push = n;
+      n.loaded = true;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = true;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js",
+    );
     window.fbq("init", metaPixelId);
     window.fbq("track", "PageView");
   }
@@ -586,8 +701,10 @@ if (faqItems.length) {
       card_id: params.card_id || undefined,
       destination: params.destination || undefined,
     };
-    if (typeof window.gtag === "function" && ga4Id) window.gtag("event", name, safeParams);
-    if (typeof window.fbq === "function" && metaPixelId) window.fbq("trackCustom", name, safeParams);
+    if (typeof window.gtag === "function" && ga4Id)
+      window.gtag("event", name, safeParams);
+    if (typeof window.fbq === "function" && metaPixelId)
+      window.fbq("trackCustom", name, safeParams);
   };
 
   document.addEventListener("click", (event) => {
@@ -595,17 +712,30 @@ if (faqItems.length) {
     if (!link) return;
 
     const href = link.getAttribute("href") || "";
-    const placement = link.dataset.placement ||
-      (link.closest(".hero") ? "hero" : link.closest(".footer") ? "footer" : link.closest(".team") ? "team" : "site");
+    const placement =
+      link.dataset.placement ||
+      (link.closest(".hero")
+        ? "hero"
+        : link.closest(".footer")
+          ? "footer"
+          : link.closest(".team")
+            ? "team"
+            : "site");
 
     if (link.dataset.track === "hero-card") {
-      emit("hero_card_click", { placement, card_id: link.dataset.cardId || "unknown" });
+      emit("hero_card_click", {
+        placement,
+        card_id: link.dataset.cardId || "unknown",
+      });
     }
 
     const isTelegram = href.includes("rozvitok-medcenter-bot.tg.pulse.is");
-    const isBooking = link.dataset.track === "booking" || /Запис|Вартість і запис/i.test(link.textContent || "");
+    const isBooking =
+      link.dataset.track === "booking" ||
+      /Запис|Вартість і запис/i.test(link.textContent || "");
 
     if (isBooking) emit("booking_click", { placement });
-    if (isTelegram) emit("telegram_bot_click", { placement, destination: "telegram_bot" });
+    if (isTelegram)
+      emit("telegram_bot_click", { placement, destination: "telegram_bot" });
   });
 })();
