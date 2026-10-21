@@ -739,3 +739,84 @@ if (faqItems.length) {
       emit("telegram_bot_click", { placement, destination: "telegram_bot" });
   });
 })();
+
+/* DOCTOR DETAILS OVERLAY */
+
+const doctorOverlay = document.createElement("div");
+
+doctorOverlay.className = "doctor-details-overlay";
+doctorOverlay.hidden = true;
+
+doctorOverlay.innerHTML = `
+  <div class="doctor-details-overlay__panel"
+       role="dialog"
+       aria-modal="true"
+       aria-label="Детальніше про консультацію">
+    <button
+      class="doctor-details-overlay__close"
+      type="button"
+      aria-label="Закрити"
+    >
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <div class="doctor-details-overlay__content"></div>
+  </div>
+`;
+
+document.body.appendChild(doctorOverlay);
+
+const overlayContent = doctorOverlay.querySelector(
+  ".doctor-details-overlay__content",
+);
+
+const overlayClose = doctorOverlay.querySelector(
+  ".doctor-details-overlay__close",
+);
+
+let activeDoctorButton = null;
+
+function closeDoctorDetails() {
+  doctorOverlay.hidden = true;
+  overlayContent.replaceChildren();
+  document.body.classList.remove("doctor-details-open");
+
+  if (activeDoctorButton) {
+    activeDoctorButton.setAttribute("aria-expanded", "false");
+    activeDoctorButton.focus();
+    activeDoctorButton = null;
+  }
+}
+
+document.querySelectorAll(".doctor-card__info .more").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const details = button.parentElement.querySelector(".doctor-card__details");
+
+    if (!details) return;
+
+    overlayContent.innerHTML = details.innerHTML;
+
+    activeDoctorButton = button;
+    button.setAttribute("aria-expanded", "true");
+
+    doctorOverlay.hidden = false;
+    document.body.classList.add("doctor-details-open");
+
+    overlayClose.focus();
+  });
+});
+
+overlayClose.addEventListener("click", closeDoctorDetails);
+
+doctorOverlay.addEventListener("click", (event) => {
+  if (event.target === doctorOverlay) {
+    closeDoctorDetails();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !doctorOverlay.hidden) {
+    closeDoctorDetails();
+  }
+});
