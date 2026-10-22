@@ -6644,10 +6644,6 @@ body.team-modal-open {
 ========================================================= */
 
 @media (max-width: 520px) {
-  .footer {
-    padding-top: 58px;
-  }
-
   .footer__main {
     gap: 42px;
   }
