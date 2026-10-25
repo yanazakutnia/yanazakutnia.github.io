@@ -2,7 +2,7 @@
   --color-bg: #d6c9bc;
   --color-primary: #263068;
   --color-accent: #a9cef7;
-  --color-white: #e7e7e7;
+  --color-white: #f7f5f5;
   --color-line: rgba(38, 48, 104, 0.16);
   --font-title: "League Spartan", sans-serif;
   --font-body: "Manrope", sans-serif;
@@ -276,7 +276,7 @@ img {
   position: relative;
   display: inline-block;
   margin: 0;
-  color: var(--color-white);
+  color: #fff;
   font-family: var(--font-accent);
   font-size: 104px;
   font-weight: 500;
@@ -841,7 +841,7 @@ img {
   position: relative;
   z-index: 2;
   margin-right: -2px;
-  color: var(--color-accent);
+  color: #85b6ee;
 
   font-family: var(--font-accent);
   font-size: 45px;
@@ -1481,7 +1481,7 @@ img {
   width: 220px;
   margin: 0;
 
-  color: var(--color-accent);
+  color: #85b6ee;
 
   font-family: var(--font-title);
   font-size: 14px;
@@ -1820,6 +1820,12 @@ img {
   letter-spacing: 2.4px;
 
   text-transform: uppercase;
+}
+
+.formats .section-label,
+.faq__heading .section-label,
+.work-process__head .section-label {
+  color: #85b6ee;
 }
 
 .section-heading {
@@ -2351,7 +2357,7 @@ img {
 /* білі акцентні слова */
 
 .doctor-guide__head .section-heading em {
-  color: var(--color-white);
+  color: #fff;
 
   font-family: var(--font-accent);
   font-weight: 500;
@@ -2977,6 +2983,7 @@ img {
 
 .team__heading .section-label {
   margin-bottom: 20px;
+  color: #85b6ee;
 }
 
 .team__heading .section-heading {
@@ -2986,7 +2993,7 @@ img {
 .team__heading .section-heading em {
   display: block;
 
-  color: var(--color-accent);
+  color: #85b6ee;
 
   font-family: var(--font-accent);
   font-size: 1.1em;
@@ -3346,7 +3353,7 @@ img {
   gap: 10px;
 
   color: var(--color-primary);
-  background: var(--color-token-40);
+  background: #fff;
 
   font-family: var(--font-title);
   font-size: 11px;
@@ -4264,7 +4271,7 @@ body.team-modal-open {
 .formats__heading em {
   display: block;
 
-  color: var(--color-accent);
+  color: #85b6ee;
 
   font-family: var(--font-accent);
   font-size: 1.05em;
@@ -4826,7 +4833,7 @@ body.team-modal-open {
 
   display: inline-block;
 
-  color: var(--color-white);
+  color: #fff;
 
   font-family: var(--font-accent);
   font-size: 94px;
@@ -4922,6 +4929,8 @@ body.team-modal-open {
   position: absolute;
 
   inset: 0;
+  display: flex;
+  align-items: self-end;
 }
 
 /* fade photo into beige background */
@@ -4947,17 +4956,26 @@ body.team-modal-open {
 }
 
 .about-hero__portrait img {
+  object-fit: cover;
+  object-position: top;
+  height: 70%;
+  max-height: 700px;
+  max-width: 530px;
+  min-width: 500px;
   position: absolute;
+  right: 60px;
+  top: 18%;
 
-  right: 0;
-  bottom: 0;
+  -webkit-mask-image:
+    linear-gradient(to bottom, black 75%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 10%);
 
-  width: auto;
-  height: 94%;
-  max-width: none;
+  mask-image:
+    linear-gradient(to bottom, black 75%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 10%);
 
-  object-fit: contain;
-  object-position: right bottom;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
 }
 
 /* =========================================================
@@ -4967,17 +4985,13 @@ body.team-modal-open {
 .about-hero__person {
   position: absolute;
   z-index: 5;
-
   right: 8vw;
   bottom: 48px;
-
-  max-width: 280px;
-
-  padding: 16px 20px;
-
+  max-width: 500px;
+  min-width: 400px;
+  padding: 30px 41px;
   color: var(--color-white);
   background: var(--color-primary);
-
   pointer-events: auto;
 }
 
@@ -5041,10 +5055,6 @@ body.team-modal-open {
 
     width: 68vw;
   }
-
-  .about-hero__portrait img {
-    height: 92%;
-  }
 }
 
 /* =========================================================
@@ -5099,6 +5109,7 @@ body.team-modal-open {
     left: 0;
     bottom: 0;
     width: 70vw;
+    min-width: auto;
     object-fit: cover;
     object-position: top;
     height: 104%;
@@ -5195,6 +5206,13 @@ body.team-modal-open {
 
   .about-hero__portrait img {
     height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    right: auto;
+    left: 0;
+    top: 0;
+    mask-image: none;
   }
 
   .about-hero__copy {
@@ -5251,7 +5269,7 @@ body.team-modal-open {
 }
 
 .faq__heading .section-heading em {
-  color: var(--color-accent);
+  color: #85b6ee;
 
   font-family: var(--font-accent);
   font-size: 1.08em;
@@ -6007,12 +6025,12 @@ body.team-modal-open {
 
   margin: 0;
 
-  color: var(--color-white);
+  color: #fff;
 
   font-family: var(--font-title);
   font-size: clamp(58px, 6vw, 88px);
   font-weight: 600;
-  line-height: 0.94;
+  line-height: 1.1;
 
   letter-spacing: -4px;
 
@@ -6048,16 +6066,16 @@ body.team-modal-open {
 
   margin: 0;
 
-  color: var(--color-white);
+  color: #fff;
 
   font-size: 15px;
   line-height: 1.7;
 
-  opacity: 0.72;
+  opacity: 0.92;
 }
 
 .final-cta__text strong {
-  color: var(--color-white);
+  color: #fff;
 
   font-weight: 600;
 
@@ -6290,7 +6308,6 @@ body.team-modal-open {
     max-width: 620px;
 
     font-size: clamp(43px, 11vw, 60px);
-    line-height: 0.96;
 
     letter-spacing: -2.4px;
   }
@@ -6470,7 +6487,7 @@ body.team-modal-open {
   font-size: 13px;
   line-height: 1.6;
 
-  opacity: 0.65;
+  opacity: 0.85;
 }
 
 /* SOCIAL BUTTONS */
@@ -6492,7 +6509,7 @@ body.team-modal-open {
 
   gap: 10px;
 
-  color: var(--color-white);
+  color: #fff;
   background: var(--color-primary);
 
   font-family: var(--font-title);
@@ -6543,7 +6560,7 @@ body.team-modal-open {
 
   gap: 12px;
 
-  color: var(--color-white);
+  color: #fff;
   background: var(--color-primary);
 }
 
@@ -6584,7 +6601,7 @@ body.team-modal-open {
   font-size: 10px;
   line-height: 1.5;
 
-  opacity: 0.52;
+  opacity: 0.82;
 }
 
 /* =========================================================
