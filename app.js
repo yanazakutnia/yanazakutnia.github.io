@@ -809,6 +809,22 @@ document.querySelectorAll(".doctor-card__info .more").forEach((button) => {
 
 overlayClose.addEventListener("click", closeDoctorDetails);
 
+// Формати: використовуємо ТЕ САМЕ модальне вікно «Детальніше», що й у картках лікарів.
+document.querySelectorAll(".formats__more").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    const details = button.parentElement.querySelector(".formats__details");
+    if (!details) return;
+    overlayContent.innerHTML = details.innerHTML;
+    activeDoctorButton = button;
+    button.setAttribute("aria-expanded", "true");
+    doctorOverlay.hidden = false;
+    document.body.classList.add("doctor-details-open");
+    overlayClose.focus();
+  });
+});
+
+
 doctorOverlay.addEventListener("click", (event) => {
   if (event.target === doctorOverlay) {
     closeDoctorDetails();

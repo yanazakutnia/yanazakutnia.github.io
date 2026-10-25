@@ -5096,9 +5096,11 @@ body.team-modal-open {
 
   .about-hero__portrait img {
     right: auto;
-    left: 16%;
+    left: 0;
     bottom: 0;
-
+    width: 70vw;
+    object-fit: cover;
+    object-position: top;
     height: 104%;
   }
 
@@ -5183,14 +5185,16 @@ body.team-modal-open {
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 520px) {
+@media (max-width: 620px) {
+  .about-hero__portrait img {
+    width: 100vw;
+  }
   .about-hero__visual {
-    height: 42svh;
-    min-height: 330px;
+    height: 48svh;
   }
 
   .about-hero__portrait img {
-    height: 97%;
+    height: 100%;
   }
 
   .about-hero__copy {
@@ -7101,5 +7105,59 @@ body.doctor-details-open {
 
   .footer__bottom-copy {
     align-items: center;
+  }
+}
+
+/* Формати та запис — кнопки й модальне «Детальніше» в існуючому стилі */
+.formats__description .formats__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  font-size: 12px;
+}
+.formats__details[hidden] {
+  display: none;
+}
+.formats__book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 11px 16px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-title);
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 220px;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.formats__book i {
+  font-size: 13px;
+}
+.formats__book:hover {
+  background: #4659a1;
+  transform: translateY(-2px);
+}
+.formats__description .formats__more + .formats__details + .formats__book {
+  display: flex;
+  width: max-content;
+}
+@media (max-width: 820px) {
+  .formats__book {
+    max-width: 100%;
   }
 }
