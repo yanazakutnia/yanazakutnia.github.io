@@ -757,7 +757,6 @@ img {
   }
 }
 
-/* HERO CTA вЂ” refined */
 .hero__actions .action {
   position: relative;
   overflow: hidden;
@@ -777,7 +776,6 @@ img {
   transition: transform 0.28s ease;
 }
 
-/* perfectly straight, thin arrow */
 .hero__actions .action__arrow::before {
   content: "";
   position: absolute;
@@ -825,7 +823,6 @@ img {
   }
 }
 
-/* Signature logo inspired by the supplied reference */
 .brand--signature {
   gap: 2px;
 }
@@ -865,7 +862,6 @@ img {
   font-weight: 600;
 }
 
-/* Hero buttons: soft BeClinic-like capsule with an inset bottom edge */
 .hero__actions {
   gap: 16px;
 }
@@ -960,7 +956,6 @@ img {
   opacity: 0.72;
 }
 
-/* Recognize / route section */
 .recognize {
   position: relative;
   padding: 112px 0 128px;
@@ -1286,7 +1281,6 @@ img {
   }
 }
 
-/* Route section v2 вЂ” cleaner desktop composition */
 @media (min-width: 821px) {
   .recognize {
     padding: 112px 0 120px;
@@ -1475,8 +1469,6 @@ img {
   z-index: 2;
 }
 
-/* label */
-
 .medical-reason__eyebrow {
   width: 220px;
   margin: 0;
@@ -1622,13 +1614,11 @@ img {
    REVEAL
 ========================================= */
 
-/* Р—Р° Р·Р°РјРѕРІС‡СѓРІР°РЅРЅСЏРј РІРµСЃСЊ РєРѕРЅС‚РµРЅС‚ РІРёРґРёРјРёР№ */
 .section-reveal {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* РҐРѕРІР°С”РјРѕ С‚С–Р»СЊРєРё РїС–СЃР»СЏ Р·Р°РїСѓСЃРєСѓ JS */
 .js .section-reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -1798,11 +1788,6 @@ img {
     user-select: none;
   }
 }
-
-/* =========================================================
-   SHARED SECTION CLASSES
-   Р’РёРєРѕСЂРёСЃС‚РѕРІСѓС”РјРѕ С– РІ РЅР°СЃС‚СѓРїРЅРёС… СЃРµРєС†С–СЏС…
-========================================================= */
 
 .section-head {
   position: relative;
@@ -2265,8 +2250,6 @@ img {
   white-space: nowrap;
 }
 
-/* С‚РѕРЅРєРёР№ СЂРѕР·РґС–Р»СЋРІР°С‡ */
-
 .marquee__group i {
   position: relative;
 
@@ -2423,8 +2406,6 @@ img {
     font-size: 11px;
   }
 }
-
-/* Р±С–Р»С– Р°РєС†РµРЅС‚РЅС– СЃР»РѕРІР° */
 
 .doctor-guide__head .section-heading em {
   color: #fff;
@@ -2701,9 +2682,6 @@ img {
   font-size: 16px;
   line-height: 1;
 }
-
-/* РїСЂРёР±РёСЂР°С”РјРѕ РґРµРєРѕСЂР°С‚РёРІРЅСѓ РЅРёР¶РЅСЋ Р»С–РЅС–СЋ,
-   СЏРєР° С” Сѓ hero action */
 
 .doctor-card__action::after {
   display: none;
@@ -3401,8 +3379,6 @@ img {
   gap: 8px;
 }
 
-/* Р— Р§РРњ Р—Р’Р•Р РўРђРўРРЎРЇ */
-
 .team-card__more {
   min-width: 0;
   min-height: 50px;
@@ -3447,8 +3423,6 @@ img {
   font-size: 17px;
   line-height: 1;
 }
-
-/* Р—РђРџРРЎРђРўРРЎРЇ */
 
 .team-card__book {
   min-height: 50px;
@@ -3953,10 +3927,6 @@ body.team-modal-open {
     margin-top: 30px;
   }
 }
-/* =========================================================
-   DEVELOPMENT CHECK
-   style based on recognize section
-========================================================= */
 
 .development-check {
   position: relative;
@@ -3968,10 +3938,6 @@ body.team-modal-open {
   color: var(--color-white);
   background: var(--color-primary);
 }
-
-/* =========================================================
-   LAYOUT
-========================================================= */
 
 .development-check__layout {
   display: grid;
@@ -5160,10 +5126,6 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   MOBILE вЂ” SAME ORDER AS MOBILE HERO
-========================================================= */
-
 @media (max-width: 820px) {
   .about-hero {
     min-height: auto;
@@ -5723,11 +5685,6 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   TEAM вЂ” EDITORIAL REFINEMENT
-   Isolated overrides: keeps the existing card/modal system.
-========================================================= */
-
 .team--editorial {
   background: var(--color-token-31);
 }
@@ -6191,12 +6148,6 @@ body.team-modal-open {
   margin-top: 30px;
 }
 
-/*
- * Р’РёРєРѕСЂРёСЃС‚РѕРІСѓС”РјРѕ РўР’РћР® .action.
- * РўСѓС‚ С‚С–Р»СЊРєРё СЂРѕР·РєР»Р°РґР°С”РјРѕ С—С— РЅР° 3 РєРѕР»РѕРЅРєРё,
- * Р±Рѕ Сѓ hero СЃС‚СЂС–Р»РєР° РІ desktop РЅРµ Р±СѓР»Р° РїРѕС‚СЂС–Р±РЅР°.
- */
-
 .final-cta__action {
   width: 100%;
   min-height: 54px;
@@ -6210,10 +6161,6 @@ body.team-modal-open {
   font-size: 11px;
   font-weight: 600;
 }
-
-/* =========================================================
-   РўР’РћРЇ РўРћРќРљРђ РЎРўР Р†Р›РљРђ
-========================================================= */
 
 .final-cta__action .action__arrow {
   position: relative;
@@ -6797,9 +6744,6 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   FINAL РўР— CLEANUP вЂ” shared rules only, no visual redesign
-========================================================= */
 h1,
 h2,
 h3 {
@@ -6920,8 +6864,6 @@ h3 {
   }
 }
 
-/* TEAM вЂ” UPDATED CARDS */
-
 .team-slider__track {
   align-items: stretch;
 }
@@ -7008,8 +6950,6 @@ h3 {
     font-size: 12px;
   }
 }
-
-/* SWIPE вЂ” DOCTOR GUIDE */
 
 @media (max-width: 820px) {
   .doctor-guide__viewport {
@@ -7108,8 +7048,6 @@ h3 {
   }
 }
 
-/* РџР°РЅРµР»СЊ В«Р”РµС‚Р°Р»СЊРЅС–С€РµВ» РїРѕРІРµСЂС… СѓСЃС–С… РєР°СЂС‚РѕРє */
-
 .doctor-details-overlay {
   position: fixed;
   inset: 0;
@@ -7133,7 +7071,6 @@ h3 {
   padding: 40px 30px 30px;
   border-radius: 20px;
 
-  /* РџРѕРІРЅС–СЃС‚СЋ РЅРµРїСЂРѕР·РѕСЂРёР№ С„РѕРЅ */
   background: #ffffff;
   color: #263068;
 
@@ -7225,7 +7162,6 @@ body.doctor-details-open {
   }
 }
 
-/* Р¤РѕСЂРјР°С‚Рё С‚Р° Р·Р°РїРёСЃ вЂ” РєРЅРѕРїРєРё Р№ РјРѕРґР°Р»СЊРЅРµ В«Р”РµС‚Р°Р»СЊРЅС–С€РµВ» РІ С–СЃРЅСѓСЋС‡РѕРјСѓ СЃС‚РёР»С– */
 .formats__description .formats__more {
   display: inline-flex;
   align-items: center;
@@ -7279,7 +7215,6 @@ body.doctor-details-open {
   }
 }
 
-/* Typography refinement вЂ” IBM Plex Sans Condensed */
 .hero__title,
 .section-heading,
 .medical-reason__title,
@@ -7296,7 +7231,6 @@ body.doctor-details-open {
   }
 }
 
-/* About center вЂ” director portrait: phones only */
 @media (max-width: 620px) {
   .team-director__photo {
     min-height: clamp(280px, 85vw, 370px);
@@ -7316,7 +7250,6 @@ body.doctor-details-open {
   }
 }
 
-/* Accessibility refinement: booking CTAs and informational text */
 .consult,
 .mobile-menu__cta,
 .hero__actions .action,
@@ -7329,7 +7262,6 @@ body.doctor-details-open {
   line-height: 1.35;
 }
 
-/* Keep longer Ukrainian CTA labels readable on narrow screens. */
 .hero__actions .action,
 .final-cta__action,
 .team-card__book,
@@ -7337,7 +7269,6 @@ body.doctor-details-open {
   overflow-wrap: break-word;
 }
 
-/* License, public offer, notices and quiet informational captions. */
 .footer__bottom .footer__license,
 .footer__bottom .footer__offer,
 .hero__note,
@@ -7348,7 +7279,6 @@ body.doctor-details-open {
   line-height: 1.55;
 }
 
-/* Improve subdued credentials, specialities and labels without altering palette. */
 .team-director__identity > p,
 .team-director__topline > span,
 .team-director__meta span,
@@ -7363,7 +7293,6 @@ body.doctor-details-open {
   color: rgba(38, 48, 104, 0.82);
 }
 
-/* The final CTA is on a dark background: keep its fine print light. */
 .final-cta__footer p {
   color: rgba(247, 245, 245, 0.88);
 }
