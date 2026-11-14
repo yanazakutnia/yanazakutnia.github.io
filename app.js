@@ -78,9 +78,75 @@ const sectionObserver = new IntersectionObserver(
 sectionRevealItems.forEach((item) => {
   sectionObserver.observe(item);
 });
-/* =========================================
-   DOCTOR GUIDE CAROUSEL
-========================================= */
+
+
+const enableCarouselDrag = ({ viewport, track, getIndex, getMaxIndex, getCardWidth, getDistance, setIndex, update }) => {
+  if (!viewport || !track) return;
+  let activePointer = null;
+  let startX = 0;
+  let startY = 0;
+  let lastX = 0;
+  let lastY = 0;
+  let dragging = false;
+  let suppressClick = false;
+  const transition = "transform 0.56s cubic-bezier(0.22, 1, 0.36, 1)";
+  viewport.addEventListener("pointerdown", (event) => {
+    if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+    if (event.target.closest("button, a, input, textarea, select") && event.pointerType === "mouse") return;
+    activePointer = event.pointerId;
+    startX = lastX = event.clientX;
+    startY = lastY = event.clientY;
+    dragging = false;
+    suppressClick = false;
+  });
+  viewport.addEventListener("pointermove", (event) => {
+    if (event.pointerId !== activePointer) return;
+    lastX = event.clientX;
+    lastY = event.clientY;
+    const dx = lastX - startX;
+    const dy = lastY - startY;
+    if (!dragging) {
+      if (Math.abs(dx) < 8 || Math.abs(dx) <= Math.abs(dy)) return;
+      dragging = true;
+      suppressClick = true;
+      if (event.pointerType === "mouse") {
+        event.preventDefault();
+        viewport.setPointerCapture(event.pointerId);
+      }
+    }
+    let offset = dx;
+    if ((getIndex() === 0 && dx > 0) || (getIndex() === getMaxIndex() && dx < 0)) offset *= 0.24;
+    track.style.transition = "none";
+    track.style.transform = `translate3d(${-getDistance() + offset}px, 0, 0)`;
+  });
+  const finish = (event, cancelled = false) => {
+    if (event.pointerId !== activePointer) return;
+    activePointer = null;
+    if (dragging && !cancelled) {
+      const dx = lastX - startX;
+      const dy = lastY - startY;
+      const threshold = Math.min(70, getCardWidth() * 0.16);
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) >= threshold) {
+        setIndex(Math.max(0, Math.min(getMaxIndex(), getIndex() + (dx < 0 ? 1 : -1))));
+      }
+    }
+    track.style.transition = transition;
+    update();
+    dragging = false;
+  };
+  viewport.addEventListener("pointerup", (event) => finish(event));
+  viewport.addEventListener("pointercancel", (event) => finish(event, true));
+  viewport.addEventListener("lostpointercapture", (event) => {
+    if (event.pointerId === activePointer) finish(event, true);
+  });
+  viewport.addEventListener("click", (event) => {
+    if (!suppressClick) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    suppressClick = false;
+  }, true);
+  viewport.addEventListener("dragstart", (event) => event.preventDefault());
+};
 
 const doctorGuide = document.querySelector(".doctor-guide");
 
@@ -138,108 +204,21 @@ if (doctorGuide) {
     updateCarousel();
   });
 
-  /* SWIPE — DOCTOR GUIDE */
-
-  let touchStartX = 0;
-  let touchStartY = 0;
-  let touchCurrentX = 0;
-  let touchCurrentY = 0;
-  let isDragging = false;
-
-  const getDistance = () => {
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    return index * (cardWidth + 16);
-  };
-
-  viewport.addEventListener(
-    "touchstart",
-    (event) => {
-      if (window.innerWidth > 820) return;
-
-      const touch = event.touches[0];
-
-      touchStartX = touch.clientX;
-      touchStartY = touch.clientY;
-      touchCurrentX = touchStartX;
-      touchCurrentY = touchStartY;
-
-      isDragging = true;
-      track.style.transition = "none";
-    },
-    { passive: true },
-  );
-
-  viewport.addEventListener(
-    "touchmove",
-    (event) => {
-      if (window.innerWidth > 820 || !isDragging) return;
-
-      const touch = event.touches[0];
-
-      touchCurrentX = touch.clientX;
-      touchCurrentY = touch.clientY;
-
-      const deltaX = touchCurrentX - touchStartX;
-      const deltaY = touchCurrentY - touchStartY;
-
-      if (Math.abs(deltaY) > Math.abs(deltaX)) return;
-
-      const maxIndex = Math.max(0, cards.length - visibleCards());
-
-      let dragDistance = deltaX;
-
-      if ((index === 0 && deltaX > 0) || (index === maxIndex && deltaX < 0)) {
-        dragDistance *= 0.24;
-      }
-
-      track.style.transform = `translate3d(${-getDistance() + dragDistance}px, 0, 0)`;
-    },
-    { passive: true },
-  );
-
-  viewport.addEventListener("touchend", () => {
-    if (!isDragging) return;
-
-    isDragging = false;
-
-    const deltaX = touchCurrentX - touchStartX;
-    const deltaY = touchCurrentY - touchStartY;
-
-    const threshold = Math.min(
-      70,
-      cards[0].getBoundingClientRect().width * 0.16,
-    );
-
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      const maxIndex = Math.max(0, cards.length - visibleCards());
-
-      if (deltaX < -threshold && index < maxIndex) {
-        index++;
-      } else if (deltaX > threshold && index > 0) {
-        index--;
-      }
-    }
-
-    track.style.transition = "transform 0.56s cubic-bezier(0.22, 1, 0.36, 1)";
-
-    updateCarousel();
-  });
-
-  viewport.addEventListener("touchcancel", () => {
-    isDragging = false;
-
-    track.style.transition = "transform 0.56s cubic-bezier(0.22, 1, 0.36, 1)";
-
-    updateCarousel();
+  enableCarouselDrag({
+    viewport, track,
+    getIndex: () => index,
+    getMaxIndex: () => Math.max(0, cards.length - visibleCards()),
+    getCardWidth: () => cards[0]?.getBoundingClientRect().width || 0,
+    getDistance: () => index * ((cards[0]?.getBoundingClientRect().width || 0) + 16),
+    setIndex: (value) => { index = value; },
+    update: updateCarousel,
   });
 
   window.addEventListener("resize", updateCarousel);
 
   updateCarousel();
 }
-/* =========================================================
-   TEAM CAROUSEL
-========================================================= */
+
 
 const teamSection = document.querySelector(".team");
 
@@ -276,9 +255,7 @@ if (teamSection) {
 
   let isDragging = false;
 
-  /* =======================================================
-     HELPERS
-  ======================================================= */
+  
 
   const visibleCards = () => {
     if (window.innerWidth <= 820) {
@@ -308,9 +285,7 @@ if (teamSection) {
     return index * (getCardWidth() + getGap());
   };
 
-  /* =======================================================
-     UI
-  ======================================================= */
+  
 
   const updateState = () => {
     const current = String(index + 1).padStart(2, "0");
@@ -347,9 +322,7 @@ if (teamSection) {
     }
   };
 
-  /* =======================================================
-     POSITION
-  ======================================================= */
+  
 
   const updateCarousel = (animate = true) => {
     index = Math.max(0, Math.min(index, getMaxIndex()));
@@ -363,9 +336,7 @@ if (teamSection) {
     updateState();
   };
 
-  /* =======================================================
-     PREV / NEXT
-  ======================================================= */
+  
 
   const goPrev = () => {
     if (index <= 0) {
@@ -395,115 +366,17 @@ if (teamSection) {
 
   mobileNext?.addEventListener("click", goNext);
 
-  /* =======================================================
-     TOUCH
-  ======================================================= */
-
-  viewport?.addEventListener(
-    "touchstart",
-    (event) => {
-      if (window.innerWidth > 820) {
-        return;
-      }
-
-      const touch = event.touches[0];
-
-      touchStartX = touch.clientX;
-      touchStartY = touch.clientY;
-
-      touchCurrentX = touchStartX;
-      touchCurrentY = touchStartY;
-
-      isDragging = true;
-
-      track.style.transition = "none";
-    },
-    {
-      passive: true,
-    },
-  );
-
-  viewport?.addEventListener(
-    "touchmove",
-    (event) => {
-      if (window.innerWidth > 820 || !isDragging) {
-        return;
-      }
-
-      const touch = event.touches[0];
-
-      touchCurrentX = touch.clientX;
-      touchCurrentY = touch.clientY;
-
-      const deltaX = touchCurrentX - touchStartX;
-
-      const deltaY = touchCurrentY - touchStartY;
-
-      if (Math.abs(deltaY) > Math.abs(deltaX)) {
-        return;
-      }
-
-      let dragDistance = deltaX;
-
-      if (
-        (index === 0 && deltaX > 0) ||
-        (index === getMaxIndex() && deltaX < 0)
-      ) {
-        dragDistance *= 0.24;
-      }
-
-      track.style.transform = `translate3d(${
-        -getBaseDistance() + dragDistance
-      }px, 0, 0)`;
-    },
-    {
-      passive: true,
-    },
-  );
-
-  viewport?.addEventListener("touchend", () => {
-    if (window.innerWidth > 820 || !isDragging) {
-      return;
-    }
-
-    isDragging = false;
-
-    const deltaX = touchCurrentX - touchStartX;
-
-    const deltaY = touchCurrentY - touchStartY;
-
-    const threshold = Math.min(70, getCardWidth() * 0.16);
-
-    if (Math.abs(deltaY) > Math.abs(deltaX)) {
-      updateCarousel();
-
-      return;
-    }
-
-    if (deltaX <= -threshold) {
-      goNext();
-
-      return;
-    }
-
-    if (deltaX >= threshold) {
-      goPrev();
-
-      return;
-    }
-
-    updateCarousel();
+  enableCarouselDrag({
+    viewport, track,
+    getIndex: () => index,
+    getMaxIndex,
+    getCardWidth,
+    getDistance: getBaseDistance,
+    setIndex: (value) => { index = value; },
+    update: updateCarousel,
   });
 
-  viewport?.addEventListener("touchcancel", () => {
-    isDragging = false;
-
-    updateCarousel();
-  });
-
-  /* =======================================================
-     RESIZE
-  ======================================================= */
+  
 
   let resizeTimer;
 
@@ -518,9 +391,7 @@ if (teamSection) {
   updateCarousel(false);
 }
 
-/* =========================================================
-   TEAM MODAL
-========================================================= */
+
 
 const teamModal = document.querySelector(".team-modal");
 
@@ -583,9 +454,7 @@ if (teamModal) {
   });
 }
 
-/* =========================================================
-   FORMATS REVEAL
-========================================================= */
+
 
 const formatRows = document.querySelectorAll(".formats__row");
 
@@ -614,9 +483,7 @@ if (formatRows.length) {
     formatsObserver.observe(row);
   });
 }
-/* =========================================================
-   FAQ ACCORDION
-========================================================= */
+
 
 const faqItems = document.querySelectorAll(".faq__item");
 
@@ -643,10 +510,7 @@ if (faqItems.length) {
   });
 }
 
-/* =========================================================
-   ANALYTICS — privacy-safe CTA events
-   Add IDs to <body data-ga4-id="G-..." data-meta-pixel-id="..."> to activate.
-========================================================= */
+
 (() => {
   const body = document.body;
   const ga4Id = body?.dataset.ga4Id?.trim();
@@ -740,7 +604,7 @@ if (faqItems.length) {
   });
 })();
 
-/* DOCTOR DETAILS OVERLAY */
+
 
 const doctorOverlay = document.createElement("div");
 
@@ -809,7 +673,6 @@ document.querySelectorAll(".doctor-card__info .more").forEach((button) => {
 
 overlayClose.addEventListener("click", closeDoctorDetails);
 
-// Формати: використовуємо ТЕ САМЕ модальне вікно «Детальніше», що й у картках лікарів.
 document.querySelectorAll(".formats__more").forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();

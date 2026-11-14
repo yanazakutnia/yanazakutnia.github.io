@@ -108,7 +108,7 @@ img {
   margin-inline: auto;
 }
 
-/* Header */
+
 .header {
   position: absolute;
   inset: 0 0 auto;
@@ -219,7 +219,7 @@ img {
   display: none;
 }
 
-/* Hero */
+
 .hero {
   position: relative;
   height: 100vh;
@@ -355,7 +355,7 @@ img {
   opacity: 0.6;
 }
 
-/* Portrait */
+
 .hero__visual {
   position: absolute;
   z-index: 2;
@@ -398,7 +398,7 @@ img {
   object-position: right bottom;
 }
 
-/* Reveal */
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -412,7 +412,7 @@ img {
   transform: none;
 }
 
-/* Tablet */
+
 @media (max-width: 1100px) {
   .container {
     width: calc(100% - 48px);
@@ -467,7 +467,7 @@ img {
   }
 }
 
-/* Mobile */
+
 @media (max-width: 820px) {
   .container {
     width: calc(100% - 32px);
@@ -1452,9 +1452,7 @@ img {
   }
 }
 
-/* =========================================
-   MEDICAL REASON
-========================================= */
+
 
 .medical-reason {
   position: relative;
@@ -1483,7 +1481,7 @@ img {
   text-transform: uppercase;
 }
 
-/* heading */
+
 
 .medical-reason__top {
   margin-top: -24px;
@@ -1506,7 +1504,7 @@ img {
   color: var(--color-primary);
 }
 
-/* bottom content */
+
 
 .medical-reason__content {
   position: relative;
@@ -1519,7 +1517,7 @@ img {
   margin-top: 104px;
 }
 
-/* left accent */
+
 
 .medical-reason__aside {
   align-self: start;
@@ -1540,7 +1538,7 @@ img {
   text-transform: uppercase;
 }
 
-/* text */
+
 
 .medical-reason__copy {
   display: grid;
@@ -1560,7 +1558,7 @@ img {
   font-weight: 700;
 }
 
-/* final paragraph */
+
 
 .medical-reason__conclusion {
   position: relative;
@@ -1583,7 +1581,7 @@ img {
   background: var(--color-accent);
 }
 
-/* huge background typography */
+
 
 .medical-reason__word {
   position: absolute;
@@ -1610,9 +1608,7 @@ img {
   user-select: none;
 }
 
-/* =========================================
-   REVEAL
-========================================= */
+
 
 .section-reveal {
   opacity: 1;
@@ -1633,9 +1629,7 @@ img {
   transform: translateY(0);
 }
 
-/* =========================================
-   TABLET
-========================================= */
+
 
 @media (max-width: 1100px) {
   .medical-reason {
@@ -1667,9 +1661,7 @@ img {
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+
 
 @media (max-width: 820px) {
   .medical-reason {
@@ -1739,9 +1731,7 @@ img {
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+
 
 @media (max-width: 520px) {
   .medical-reason {
@@ -1836,9 +1826,7 @@ img {
   backdrop-filter: blur(18px);
 }
 
-/* =========================================================
-   WORK PROCESS
-========================================================= */
+
 
 .work-process {
   position: relative;
@@ -1857,7 +1845,7 @@ img {
   );
 }
 
-/* heading */
+
 
 .work-process__head {
   display: grid;
@@ -1875,9 +1863,7 @@ img {
   max-width: 820px;
 }
 
-/* =========================================================
-   PROCESS CARDS
-========================================================= */
+
 
 .work-process__grid {
   display: grid;
@@ -1911,7 +1897,7 @@ img {
   background: var(--color-token-18);
 }
 
-/* number */
+
 
 .process-card__number {
   position: absolute;
@@ -1927,7 +1913,7 @@ img {
   letter-spacing: 1.4px;
 }
 
-/* icon */
+
 
 .process-card__icon {
   width: 64px;
@@ -1951,7 +1937,7 @@ img {
   line-height: 1;
 }
 
-/* content */
+
 
 .process-card__content {
   padding-top: 40px;
@@ -1976,9 +1962,7 @@ img {
   line-height: 1.6;
 }
 
-/* =========================================================
-   RESULT
-========================================================= */
+
 
 .work-process__result {
   margin-top: 72px;
@@ -2018,7 +2002,7 @@ img {
   text-transform: uppercase;
 }
 
-/* result list */
+
 
 .result-list {
   margin: 0;
@@ -2062,9 +2046,7 @@ img {
   font-weight: 700;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
   .work-process {
@@ -2094,9 +2076,7 @@ img {
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 820px) {
   .work-process {
@@ -2161,7 +2141,7 @@ img {
     font-size: 14px;
   }
 
-  /* result */
+  
 
   .work-process__result {
     margin-top: 56px;
@@ -2189,9 +2169,7 @@ img {
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+
 
 @media (max-width: 520px) {
   .section-heading {
@@ -2206,9 +2184,7 @@ img {
     font-size: 28px;
   }
 }
-/* =========================================
-   MARQUEE
-========================================= */
+
 
 .marquee {
   width: 100%;
@@ -2271,9 +2247,7 @@ img {
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+
 
 @media (max-width: 820px) {
   .marquee {
@@ -2296,16 +2270,14 @@ img {
   }
 }
 
-/* accessibility */
+
 
 @media (prefers-reduced-motion: reduce) {
   .marquee__track {
     animation-play-state: paused;
   }
 }
-/* =========================================================
-   DOCTOR GUIDE
-========================================================= */
+
 
 .doctor-guide {
   position: relative;
@@ -2316,9 +2288,7 @@ img {
   background: var(--color-bg);
 }
 
-/* =========================================================
-   HEAD
-========================================================= */
+
 
 .doctor-guide__head {
   display: grid;
@@ -2337,7 +2307,7 @@ img {
   max-width: 820px;
 }
 
-/* Doctor guide intro */
+
 
 .doctor-guide__intro {
   min-width: 0;
@@ -2416,9 +2386,7 @@ img {
   text-transform: none;
 }
 
-/* =========================================================
-   CAROUSEL NAV
-========================================================= */
+
 
 .carousel-nav {
   display: flex;
@@ -2483,9 +2451,7 @@ img {
   font-weight: 600;
 }
 
-/* =========================================================
-   CAROUSEL
-========================================================= */
+
 
 .doctor-guide__viewport {
   overflow: hidden;
@@ -2500,9 +2466,7 @@ img {
   will-change: transform;
 }
 
-/* =========================================================
-   DOCTOR CARD
-========================================================= */
+
 
 .doctor-card {
   position: relative;
@@ -2527,9 +2491,7 @@ img {
   box-shadow: 0 24px 48px var(--color-token-22);
 }
 
-/* =========================================================
-   PASTEL COLORS
-========================================================= */
+
 
 .doctor-card--blue {
   background: var(--color-token-23);
@@ -2551,9 +2513,7 @@ img {
   background: var(--color-token-27);
 }
 
-/* =========================================================
-   NUMBER
-========================================================= */
+
 
 .doctor-card__number {
   display: block;
@@ -2569,9 +2529,7 @@ img {
   letter-spacing: 1.4px;
 }
 
-/* =========================================================
-   CARD CONTENT
-========================================================= */
+
 
 .doctor-card__body h3 {
   max-width: 320px;
@@ -2613,9 +2571,7 @@ img {
   line-height: 1.6;
 }
 
-/* =========================================================
-   CARD FOOTER
-========================================================= */
+
 
 .doctor-card__footer {
   margin-top: auto;
@@ -2650,9 +2606,7 @@ img {
   line-height: 1.4;
 }
 
-/* =========================================================
-   EXISTING ACTION BUTTON
-========================================================= */
+
 
 .doctor-card__action {
   flex: 0 0 auto;
@@ -2687,9 +2641,7 @@ img {
   display: none;
 }
 
-/* =========================================================
-   PARENT SUPPORT
-========================================================= */
+
 
 .doctor-guide__parent {
   margin-top: 32px;
@@ -2749,9 +2701,7 @@ img {
   font-size: 16px;
 }
 
-/* =========================================================
-   METABOLIC CHECK
-========================================================= */
+
 
 .metabolic-check {
   margin-top: 72px;
@@ -2767,7 +2717,7 @@ img {
   backdrop-filter: blur(16px);
 }
 
-/* LEFT */
+
 
 .doctor-guide .metabolic-check__intro .section-label {
   margin-bottom: 16px;
@@ -2810,7 +2760,7 @@ img {
   font-weight: 700;
 }
 
-/* LIST */
+
 
 .metabolic-check__list {
   margin: 0;
@@ -2845,9 +2795,7 @@ img {
   line-height: 1.55;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
   .doctor-guide {
@@ -2883,16 +2831,14 @@ img {
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 820px) {
   .doctor-guide {
     padding: 80px 0;
   }
 
-  /* HEAD */
+  
 
   .doctor-guide__head {
     display: block;
@@ -2908,7 +2854,7 @@ img {
     max-width: 100%;
   }
 
-  /* DOCTOR GUIDE MOBILE */
+  
 
   .doctor-guide > .container {
     display: flex;
@@ -2952,7 +2898,7 @@ img {
     width: 100%;
   }
 
-  /* CARD */
+  
 
   .doctor-card {
     flex-basis: 100%;
@@ -2963,7 +2909,7 @@ img {
     max-width: 100%;
   }
 
-  /* PARENT */
+  
 
   .doctor-guide__parent {
     margin-top: 24px;
@@ -2979,7 +2925,7 @@ img {
     margin-top: 4px;
   }
 
-  /* METABOLIC */
+  
 
   .metabolic-check {
     margin-top: 56px;
@@ -3008,9 +2954,7 @@ img {
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+
 
 @media (max-width: 520px) {
   .doctor-card {
@@ -3042,9 +2986,7 @@ img {
 .doctor-guide .section-label {
   color: var(--color-primary);
 }
-/* =========================================================
-   TEAM
-========================================================= */
+
 
 .team {
   position: relative;
@@ -3055,9 +2997,7 @@ img {
   background: var(--color-token-31);
 }
 
-/* =========================================================
-   HEAD
-========================================================= */
+
 
 .team__head {
   display: grid;
@@ -3100,9 +3040,7 @@ img {
   line-height: 1.65;
 }
 
-/* =========================================================
-   NAV
-========================================================= */
+
 
 .team-nav {
   display: flex;
@@ -3162,9 +3100,7 @@ img {
   font-weight: 600;
 }
 
-/* =========================================================
-   SLIDER
-========================================================= */
+
 
 .team-slider {
   min-width: 0;
@@ -3198,9 +3134,7 @@ img {
   transition: transform 0.56s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* =========================================================
-   CARD
-========================================================= */
+
 
 .team-card {
   flex: 0 0 calc((100% - 32px) / 3);
@@ -3218,9 +3152,7 @@ img {
   background: var(--color-token-33);
 }
 
-/* =========================================================
-   PHOTO
-========================================================= */
+
 
 .team-card__photo {
   position: relative;
@@ -3287,9 +3219,7 @@ img {
   text-transform: uppercase;
 }
 
-/* =========================================================
-   CONTENT
-========================================================= */
+
 
 .team-card__content {
   flex: 1;
@@ -3323,9 +3253,7 @@ img {
   line-height: 1.5;
 }
 
-/* =========================================================
-   FACTS
-========================================================= */
+
 
 .team-card__facts {
   margin: 28px 0 0;
@@ -3366,9 +3294,7 @@ img {
   line-height: 1.45;
 }
 
-/* =========================================================
-   ACTIONS
-========================================================= */
+
 
 .team-card__actions {
   margin-top: auto;
@@ -3462,9 +3388,7 @@ img {
   font-size: 13px;
 }
 
-/* =========================================================
-   BOTTOM
-========================================================= */
+
 
 .team-bottom {
   margin-top: 40px;
@@ -3501,9 +3425,7 @@ img {
   display: none;
 }
 
-/* =========================================================
-   MODAL
-========================================================= */
+
 
 body.team-modal-open {
   overflow: hidden;
@@ -3681,7 +3603,7 @@ body.team-modal-open {
   margin-top: 24px;
 }
 
-/* MODAL BOOK */
+
 
 .team-modal__action {
   min-height: 54px;
@@ -3714,9 +3636,7 @@ body.team-modal-open {
   background: var(--color-primary);
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
   .team {
@@ -3746,9 +3666,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 820px) {
   .team {
@@ -3820,7 +3738,7 @@ body.team-modal-open {
     font-size: 13px;
   }
 
-  /* buttons */
+  
 
   .team-card__actions {
     margin-top: auto;
@@ -3839,7 +3757,7 @@ body.team-modal-open {
     font-size: 12px;
   }
 
-  /* bottom */
+  
 
   .team-bottom {
     margin-top: 32px;
@@ -3858,7 +3776,7 @@ body.team-modal-open {
     gap: 8px;
   }
 
-  /* modal */
+  
 
   .team-modal {
     padding: 16px;
@@ -3893,9 +3811,7 @@ body.team-modal-open {
 .doctor-guide__start {
   margin-top: 50px;
 }
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+
 
 @media (max-width: 520px) {
   .team-card {
@@ -3946,9 +3862,7 @@ body.team-modal-open {
   gap: 88px;
 }
 
-/* =========================================================
-   TITLE
-========================================================= */
+
 
 .development-check__main {
   position: relative;
@@ -3964,9 +3878,7 @@ body.team-modal-open {
   margin-top: -10px;
 }
 
-/* =========================================================
-   CONTENT
-========================================================= */
+
 
 .development-check__content {
   position: relative;
@@ -4016,9 +3928,7 @@ body.team-modal-open {
   font-weight: 500;
 }
 
-/* =========================================================
-   BUTTON
-========================================================= */
+
 
 .development-check__action {
   position: relative;
@@ -4065,7 +3975,7 @@ body.team-modal-open {
   font-size: 18px;
 }
 
-/* straight arrow */
+
 
 .development-check__arrow {
   position: relative;
@@ -4115,9 +4025,7 @@ body.team-modal-open {
   transition: transform 0.26s ease;
 }
 
-/* =========================================================
-   NOTE
-========================================================= */
+
 
 .development-check__note {
   margin: 12px 0 0;
@@ -4129,9 +4037,7 @@ body.team-modal-open {
   line-height: 1.5;
 }
 
-/* =========================================================
-   BOTTOM SCALE
-========================================================= */
+
 
 .development-check__bottom {
   position: relative;
@@ -4181,9 +4087,7 @@ body.team-modal-open {
   transform: translate(-50%, -50%);
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
   .development-check {
@@ -4210,9 +4114,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 820px) {
   .development-check {
@@ -4283,9 +4185,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+
 
 @media (max-width: 520px) {
   .development-check__content {
@@ -4312,9 +4212,7 @@ body.team-modal-open {
     line-height: 1.25;
   }
 }
-/* =========================================================
-   FORMATS
-========================================================= */
+
 
 .formats {
   position: relative;
@@ -4325,7 +4223,7 @@ body.team-modal-open {
   background: var(--color-token-31);
 }
 
-/* HEAD */
+
 
 .formats__head {
   display: grid;
@@ -4358,16 +4256,14 @@ body.team-modal-open {
   text-transform: none;
 }
 
-/* =========================================================
-   LIST
-========================================================= */
+
 
 .formats__list {
   display: grid;
   gap: 8px;
 }
 
-/* ROW */
+
 
 .formats__row {
   position: relative;
@@ -4393,7 +4289,7 @@ body.team-modal-open {
     background-color 0.35s ease;
 }
 
-/* moving background */
+
 
 .formats__row::before {
   content: "";
@@ -4412,7 +4308,7 @@ body.team-modal-open {
   transform: translateX(0);
 }
 
-/* reveal */
+
 
 .formats__row.is-visible {
   opacity: 1;
@@ -4435,7 +4331,7 @@ body.team-modal-open {
   transition-delay: 0.32s;
 }
 
-/* CONTENT */
+
 
 .formats__name,
 .formats__description {
@@ -4492,7 +4388,7 @@ body.team-modal-open {
   font-weight: 600;
 }
 
-/* little movement on hover */
+
 
 .formats__name,
 .formats__description {
@@ -4511,9 +4407,7 @@ body.team-modal-open {
   color: var(--color-token-37);
 }
 
-/* =========================================================
-   BOTTOM
-========================================================= */
+
 
 .formats__bottom {
   margin-top: 24px;
@@ -4522,7 +4416,7 @@ body.team-modal-open {
   gap: 8px;
 }
 
-/* BOT */
+
 
 .formats__bot {
   padding: 32px 36px;
@@ -4558,7 +4452,7 @@ body.team-modal-open {
   line-height: 1.5;
 }
 
-/* BOT BUTTON */
+
 
 .formats__bot-action {
   min-width: 300px;
@@ -4604,9 +4498,7 @@ body.team-modal-open {
   transform: translateX(4px);
 }
 
-/* =========================================================
-   CHOOSE DOCTOR
-========================================================= */
+
 
 .formats__choose {
   min-height: 190px;
@@ -4647,7 +4539,7 @@ body.team-modal-open {
   text-transform: none;
 }
 
-/* CHOOSE BUTTON */
+
 
 .formats__choose-action {
   min-width: 220px;
@@ -4702,9 +4594,7 @@ body.team-modal-open {
   margin-top: 0 !important;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
   .formats {
@@ -4726,9 +4616,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 820px) {
   .formats {
@@ -4756,7 +4644,7 @@ body.team-modal-open {
     letter-spacing: -2px;
   }
 
-  /* rows */
+  
 
   .formats__list {
     gap: 6px;
@@ -4786,7 +4674,7 @@ body.team-modal-open {
     transform: none;
   }
 
-  /* bot */
+  
 
   .formats__bot {
     padding: 28px 24px;
@@ -4801,7 +4689,7 @@ body.team-modal-open {
     margin-top: 24px;
   }
 
-  /* choose */
+  
 
   .formats__choose {
     min-height: 0;
@@ -4822,9 +4710,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+
 
 @media (max-width: 520px) {
   .formats__row {
@@ -4844,9 +4730,7 @@ body.team-modal-open {
     padding-inline: 20px;
   }
 }
-/* =========================================================
-   ABOUT вЂ” HERO STYLE
-========================================================= */
+
 
 .about-hero {
   position: relative;
@@ -4867,9 +4751,7 @@ body.team-modal-open {
   min-height: 100svh;
 }
 
-/* =========================================================
-   COPY
-========================================================= */
+
 
 .about-hero__copy {
   position: relative;
@@ -4880,7 +4762,7 @@ body.team-modal-open {
   padding: 112px 0 128px;
 }
 
-/* same visual language as hero title */
+
 
 .about-hero__title {
   max-width: 820px;
@@ -4895,7 +4777,7 @@ body.team-modal-open {
   text-transform: uppercase;
 }
 
-/* Playfair accent вЂ” like "РјР°СЂС€СЂСѓС‚" */
+
 
 .about-hero__accent {
   margin-top: -2px;
@@ -4918,9 +4800,7 @@ body.team-modal-open {
   white-space: nowrap;
 }
 
-/* =========================================================
-   TEXT
-========================================================= */
+
 
 .about-hero__content {
   position: relative;
@@ -4959,9 +4839,7 @@ body.team-modal-open {
   line-height: 1.62;
 }
 
-/* =========================================================
-   STORY
-========================================================= */
+
 
 .about-hero__story {
   max-width: 620px;
@@ -4981,9 +4859,7 @@ body.team-modal-open {
   font-weight: 600;
 }
 
-/* =========================================================
-   PHOTO вЂ” SAME PRINCIPLE AS HERO
-========================================================= */
+
 
 .about-hero__visual {
   position: absolute;
@@ -5006,7 +4882,7 @@ body.team-modal-open {
   align-items: self-end;
 }
 
-/* fade photo into beige background */
+
 
 .about-hero__portrait::before {
   content: "";
@@ -5051,9 +4927,7 @@ body.team-modal-open {
   mask-composite: intersect;
 }
 
-/* =========================================================
-   PERSON
-========================================================= */
+
 
 .about-hero__person {
   position: absolute;
@@ -5091,9 +4965,7 @@ body.team-modal-open {
   opacity: 0.7;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
   .about-hero__copy {
@@ -5140,7 +5012,7 @@ body.team-modal-open {
     flex-direction: column;
   }
 
-  /* PHOTO FIRST */
+  
 
   .about-hero__visual {
     order: 1;
@@ -5180,13 +5052,13 @@ body.team-modal-open {
     height: 104%;
   }
 
-  /* NAME */
+  
 
   .about-hero__person {
     display: none;
   }
 
-  /* COPY SECOND */
+  
 
   .about-hero__copy {
     order: 2;
@@ -5214,7 +5086,7 @@ body.team-modal-open {
     letter-spacing: -3px;
   }
 
-  /* TEXT */
+  
 
   .about-hero__content {
     max-width: none;
@@ -5255,9 +5127,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+
 
 @media (max-width: 620px) {
   .about-hero__portrait img {
@@ -5291,9 +5161,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   FAQ
-========================================================= */
+
 
 .faq {
   position: relative;
@@ -5306,9 +5174,7 @@ body.team-modal-open {
   background: var(--color-token-31);
 }
 
-/* =========================================================
-   HEAD
-========================================================= */
+
 
 .faq__head {
   display: grid;
@@ -5350,9 +5216,7 @@ body.team-modal-open {
   line-height: 1.65;
 }
 
-/* =========================================================
-   LIST
-========================================================= */
+
 
 .faq__list {
   width: min(100%, 1020px);
@@ -5363,9 +5227,7 @@ body.team-modal-open {
   gap: 8px;
 }
 
-/* =========================================================
-   ITEM
-========================================================= */
+
 
 .faq__item {
   position: relative;
@@ -5387,9 +5249,7 @@ body.team-modal-open {
   background: var(--color-accent);
 }
 
-/* =========================================================
-   QUESTION
-========================================================= */
+
 
 .faq__question {
   position: relative;
@@ -5436,9 +5296,7 @@ body.team-modal-open {
   transform: none;
 }
 
-/* =========================================================
-   PLUS / MINUS
-========================================================= */
+
 
 .faq__toggle {
   position: relative;
@@ -5495,9 +5353,7 @@ body.team-modal-open {
   transform: translate(-50%, -50%) rotate(0);
 }
 
-/* =========================================================
-   ANSWER
-========================================================= */
+
 
 .faq__answer {
   display: grid;
@@ -5545,9 +5401,7 @@ body.team-modal-open {
   font-weight: 600;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
   .faq {
@@ -5570,9 +5424,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 820px) {
   .faq {
@@ -5602,7 +5454,7 @@ body.team-modal-open {
     font-size: 14px;
   }
 
-  /* ITEMS */
+  
 
   .faq__list {
     gap: 6px;
@@ -5631,7 +5483,7 @@ body.team-modal-open {
     transform: none;
   }
 
-  /* ANSWER */
+  
 
   .faq__answer-inner {
     max-width: none;
@@ -5649,9 +5501,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+
 
 @media (max-width: 520px) {
   .faq__question {
@@ -6007,9 +5857,7 @@ body.team-modal-open {
     font-size: 17px;
   }
 }
-/* =========================================================
-   FINAL CTA
-========================================================= */
+
 
 .final-cta {
   position: relative;
@@ -6028,9 +5876,7 @@ body.team-modal-open {
   flex-direction: column;
 }
 
-/* =========================================================
-   HEAD
-========================================================= */
+
 
 .final-cta__head {
   display: flex;
@@ -6053,9 +5899,7 @@ body.team-modal-open {
   background: var(--color-token-54);
 }
 
-/* =========================================================
-   LAYOUT
-========================================================= */
+
 
 .final-cta__layout {
   display: grid;
@@ -6070,9 +5914,7 @@ body.team-modal-open {
   margin-top: 76px;
 }
 
-/* =========================================================
-   TITLE
-========================================================= */
+
 
 .final-cta__title {
   max-width: 850px;
@@ -6107,9 +5949,7 @@ body.team-modal-open {
   letter-spacing: -3px;
 }
 
-/* =========================================================
-   TEXT
-========================================================= */
+
 
 .final-cta__side {
   padding-bottom: 4px;
@@ -6136,9 +5976,7 @@ body.team-modal-open {
   opacity: 1;
 }
 
-/* =========================================================
-   ACTIONS
-========================================================= */
+
 
 .final-cta__actions {
   display: flex;
@@ -6206,9 +6044,7 @@ body.team-modal-open {
   transform: rotate(45deg);
 }
 
-/* =========================================================
-   LIGHT BUTTON
-========================================================= */
+
 
 .final-cta__action.action--light {
   color: var(--color-primary);
@@ -6226,9 +6062,7 @@ body.team-modal-open {
   transform: translateY(-2px);
 }
 
-/* =========================================================
-   SECOND BUTTON
-========================================================= */
+
 
 .final-cta__action--dark {
   color: var(--color-white);
@@ -6250,22 +6084,20 @@ body.team-modal-open {
   transform: translateY(-2px);
 }
 
-/* ICONS */
+
 
 .final-cta__action .action__icon {
   font-size: 18px;
   line-height: 1;
 }
 
-/* ARROW HOVER */
+
 
 .final-cta__action:hover .action__arrow {
   transform: translateX(4px);
 }
 
-/* =========================================================
-   BOTTOM
-========================================================= */
+
 
 .final-cta__footer {
   margin-top: auto;
@@ -6299,9 +6131,7 @@ body.team-modal-open {
   opacity: 0.4;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
   .final-cta {
@@ -6329,9 +6159,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 820px) {
   .final-cta {
@@ -6389,9 +6217,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+
 
 @media (max-width: 520px) {
   .final-cta {
@@ -6430,9 +6256,7 @@ body.team-modal-open {
     margin-top: 60px;
   }
 }
-/* =========================================================
-   FOOTER
-========================================================= */
+
 
 .footer {
   padding: 90px 0 30px;
@@ -6441,7 +6265,7 @@ body.team-modal-open {
   background: var(--color-accent);
 }
 
-/* MAIN */
+
 
 .footer__main {
   display: grid;
@@ -6453,7 +6277,7 @@ body.team-modal-open {
   gap: 80px;
 }
 
-/* BRAND */
+
 
 .footer__brand {
   max-width: 380px;
@@ -6479,7 +6303,7 @@ body.team-modal-open {
   opacity: 0.65;
 }
 
-/* LABELS */
+
 
 .footer__label {
   margin: 0 0 24px;
@@ -6495,7 +6319,7 @@ body.team-modal-open {
   opacity: 0.5;
 }
 
-/* NAVIGATION */
+
 
 .footer__nav {
   display: flex;
@@ -6521,7 +6345,7 @@ body.team-modal-open {
   transform: translateX(3px);
 }
 
-/* CONTACT */
+
 
 .footer__contact-text {
   max-width: 290px;
@@ -6534,7 +6358,7 @@ body.team-modal-open {
   opacity: 0.85;
 }
 
-/* SOCIAL BUTTONS */
+
 
 .footer__socials {
   display: flex;
@@ -6589,7 +6413,7 @@ body.team-modal-open {
   transform: translateY(-2px);
 }
 
-/* MEDICAL WARNING */
+
 
 .footer__warning {
   margin-top: 86px;
@@ -6627,7 +6451,7 @@ body.team-modal-open {
   text-align: center;
 }
 
-/* BOTTOM */
+
 
 .footer__bottom {
   padding-top: 28px;
@@ -6648,9 +6472,7 @@ body.team-modal-open {
   opacity: 0.82;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 1100px) {
   .footer__main {
@@ -6660,9 +6482,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 820px) {
   .footer {
@@ -6704,9 +6524,7 @@ body.team-modal-open {
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+
 
 @media (max-width: 520px) {
   .footer__main {
@@ -7112,7 +6930,7 @@ body.doctor-details-open {
   }
 }
 
-/* FOOTER BOTTOM */
+
 
 .footer__bottom {
   display: flex;
@@ -7310,3 +7128,7 @@ body.doctor-details-open {
     font-size: 15px;
   }
 }
+
+.doctor-guide__viewport, .team-slider__viewport { touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+.doctor-guide__viewport:active, .team-slider__viewport:active { cursor: grabbing; }
+.doctor-guide__viewport img, .team-slider__viewport img { -webkit-user-drag: none; user-drag: none; }
