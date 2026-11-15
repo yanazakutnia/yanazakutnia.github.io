@@ -6870,3 +6870,17 @@ body.doctor-details-open {
     padding-right: 14px;
   }
 }
+
+
+/* Team cards: compact, consistent proportions */
+.team-slider__track { align-items: stretch; }
+.team-card { min-height: 0; }
+.team-card__photo { height: 250px; flex: 0 0 250px; }
+.team-card__content { padding-top: 18px; }
+.team-card__bio { margin-top: 12px; line-height: 1.55; }
+.team-card__situations-title { margin-top: 15px; margin-bottom: 8px; }
+.team-card__situations { gap: 6px; margin-bottom: 16px; }
+.team-card__speciality { margin-top: 10px; }
+@media (max-width: 820px) {
+  .team-card__photo { height: 240px; flex-basis: 240px; }
+}
